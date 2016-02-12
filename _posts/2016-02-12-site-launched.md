@@ -95,5 +95,6 @@ The Twitter Typeahead uses AJAX to call this:
 
         return response()->json( $arrProducts);
         
-        ```
+```
+        
 Bingo! It worked.
