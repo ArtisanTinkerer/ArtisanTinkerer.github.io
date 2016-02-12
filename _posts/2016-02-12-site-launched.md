@@ -4,9 +4,6 @@ title: "The Pizza Hut Pickle"
 date: 2016-02-12
 ---
 
-
-# The Pizza Hut Pickle
-
 How can I handle those pesky product codes?
 
 I want a user to be able to type WH CP100 or WHCP100 and the Twitter Typeahead will still work.
@@ -21,7 +18,9 @@ Then this:
 
 Then followed these steps:
 ### 1 fire this in:
+
 ```
+
 curl -XPUT "http://devwebapplications-02.churchill1795.local:9200/parts" -d '
 {
     "settings": {
@@ -53,6 +52,7 @@ curl -XPUT "http://devwebapplications-02.churchill1795.local:9200/parts" -d '
     }
 }
 '
+
 ```
 
 ### 2 do the mapping
