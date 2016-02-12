@@ -22,7 +22,7 @@ Then followed these steps:
 
 ```
 
-curl -XPUT "http://devwebapplications-02.churchill1795.local:9200/parts" -d '
+curl -XPUT "http://blahblah:9200/parts" -d '
 {
     "settings": {
         "number_of_shards": 1, 
@@ -59,7 +59,7 @@ curl -XPUT "http://devwebapplications-02.churchill1795.local:9200/parts" -d '
 ### 2 Add the mapping.
 
 ```
-curl -XPUT "http://devwebapplications-02.churchill1795.local:9200/parts/_mapping/parts" -d '
+curl -XPUT "http://blahblah:9200/parts/_mapping/parts" -d '
 
 {
     "parts": {
@@ -76,7 +76,7 @@ curl -XPUT "http://devwebapplications-02.churchill1795.local:9200/parts/_mapping
 
 ### Test
 ```
-curl -s -XGET 'http://devwebapplications-02.churchill1795.local:9200/parts/_analyze?analyzer=autocomplete&pretty=1' -d "Pizza Hut"|jq ".tokens[]|.token" -r
+curl -s -XGET 'http://blahblah:9200/parts/_analyze?analyzer=autocomplete&pretty=1' -d "Pizza Hut"|jq ".tokens[]|.token" -r
 ```
 
 Then I added all to the index, using:
