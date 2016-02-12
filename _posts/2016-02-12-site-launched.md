@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Artisan Tinkerer Launched"
+title: "The Pizza Hut Pickle"
 date: 2016-02-12
 ---
 
 
-# The Pizza Hut Problem
+# The Pizza Hut Pickle
 
 How can I handle those pesky product codes?
 
