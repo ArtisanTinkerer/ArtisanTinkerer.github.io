@@ -84,7 +84,6 @@ Then I added all to the index, using:
 
 The Twitter Typeahead uses AJAX to call this:
 
-```
 
     $products = Product::complexSearch(array(
             'body' => array(
