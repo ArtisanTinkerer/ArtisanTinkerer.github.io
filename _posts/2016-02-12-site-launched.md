@@ -17,6 +17,7 @@ Then this:
 [Pizzah not Pizza H](https://medium.com/@davedash/writing-a-space-ignoring-autocompleter-with-elasticsearch-6c3c28e3a974#.5rmprpbaf)
 
 Then followed these steps:
+
 ### 1 fire this in:
 
 ```
