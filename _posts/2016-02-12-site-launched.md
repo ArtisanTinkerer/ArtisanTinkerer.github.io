@@ -18,7 +18,7 @@ Then this:
 
 Then followed these steps:
 
-### 1 fire this in:
+### 1 Fire this in the command line:
 
 ```
 
@@ -56,7 +56,7 @@ curl -XPUT "http://devwebapplications-02.churchill1795.local:9200/parts" -d '
 
 ```
 
-### 2 do the mapping
+### 2 Add the mapping.
 
 ```
 curl -XPUT "http://devwebapplications-02.churchill1795.local:9200/parts/_mapping/parts" -d '
@@ -83,7 +83,9 @@ Then I added all to the index, using:
 [Elasticquent](https://github.com/elasticquent/Elasticquent)
 
 The Twitter Typeahead uses AJAX to call this:
+
 ```
+
     $products = Product::complexSearch(array(
             'body' => array(
                 'query' => array(
@@ -93,5 +95,6 @@ The Twitter Typeahead uses AJAX to call this:
         $arrProducts = $products->
 
         return response()->json( $arrProducts);
-```
-
+        
+        ```
+Bingo! It worked.
