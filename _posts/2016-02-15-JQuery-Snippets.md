@@ -1,3 +1,10 @@
+---
+layout: post
+title: "JQuery Snippets"
+date: 2016-02-15
+---
+
+
 #JQuery Snippets
 
 I can never remember how to do bits and bobs in Jquery, so here they are:
