@@ -8,7 +8,7 @@ I can never remember how to do bits and bobs in Jquery, so here they are:
  $("#best").val(0);
 ```
  
- ##Ajax!
+##Ajax!
  
 ``` 
     $.ajax({
