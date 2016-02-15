@@ -38,7 +38,7 @@ I can never remember how to do bits and bobs in Jquery, so here they are:
 
 ```
 
-##Retrive a number from and element
+##Retrive a number from an element
 ```
 function getNum(val) {
     if (isNaN(val)) {
