@@ -9,6 +9,7 @@ I can never remember how to do bits and bobs in Jquery, so here they are:
 ```
  
  ##Ajax!
+ 
 ``` 
     $.ajax({
             type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
