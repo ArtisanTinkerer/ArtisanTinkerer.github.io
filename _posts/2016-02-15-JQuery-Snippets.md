@@ -5,17 +5,17 @@ date: 2016-02-15
 ---
 
 
-#JQuery Snippets
+# JQuery Snippets
 
 I can never remember how to do bits and bobs in Jquery, so here they are:
 
-##Set a value
+## Set a value
 
 ```
  $("#best").val(0);
 ```
  
-##Ajax!
+## Ajax!
  
 ``` 
     $.ajax({
@@ -45,7 +45,7 @@ I can never remember how to do bits and bobs in Jquery, so here they are:
 
 ```
 
-##Retrive a number from an element
+## Retrive a number from an element
 ```
 function getNum(val) {
     if (isNaN(val)) {
@@ -60,7 +60,7 @@ function getNum(val) {
 }
 ```
 
-##Select the text when the element receives focus
+## Select the text when the element receives focus
 ```
 
 $(document).ready(function () {
@@ -70,7 +70,7 @@ $(document).ready(function () {
 });
 ```
 
-##Add class
+## Add class
 ```
 $('#submit').addClass("btn-success");
 $('#submit').removeClass("btn-success");
