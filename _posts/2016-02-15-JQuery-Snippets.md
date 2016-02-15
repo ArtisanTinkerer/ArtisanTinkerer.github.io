@@ -4,10 +4,12 @@ I can never remember how to do bits and bobs in Jquery, so here they are:
 
 ##Set a value
 
+```
  $("#best").val(0);
+```
  
  ##Ajax!
- 
+``` 
     $.ajax({
             type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
             url: '/records/store', // the url where we want to POST
@@ -33,9 +35,10 @@ I can never remember how to do bits and bobs in Jquery, so here they are:
             }
         });
 
+```
 
 ##Retrive a number from and element
-
+```
 function getNum(val) {
     if (isNaN(val)) {
         val= 0;
@@ -47,18 +50,23 @@ function getNum(val) {
 
     return parseInt(val);
 }
-
+```
 
 ##Select the text when the element receives focus
+```
+
 $(document).ready(function () {
     $("input").focus(function () {
         $(this).select();
     });
 });
+```
 
 ##Add class
+```
 $('#submit').addClass("btn-success");
 $('#submit').removeClass("btn-success");
+```
 
 
 
