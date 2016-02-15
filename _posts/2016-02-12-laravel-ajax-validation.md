@@ -1,5 +1,12 @@
+---
+layout: post
+title: "Validating an Ajax request"
+date: 2016-02-15
+---
 
-# Validating and Ajax request
+
+
+# Validating an Ajax request
 
 #The JS
 I am using a Twitter Typeahead to enter the product code.
