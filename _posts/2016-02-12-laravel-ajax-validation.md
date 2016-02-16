@@ -8,7 +8,7 @@ date: 2016-02-15
 
 # Validating an Ajax request
 
-#The JS
+# The JS
 I am using a Twitter Typeahead to enter the product code.
 I want to validate when they leave the Typeahead.
 
