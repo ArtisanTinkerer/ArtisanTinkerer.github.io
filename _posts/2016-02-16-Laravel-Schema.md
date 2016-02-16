@@ -8,7 +8,6 @@ date: 2016-02-16
 
 Easy:
 
-Laravel Schema Designer
 
 [Laravel Schema Designer](http://laravelsd.com/) 
 
