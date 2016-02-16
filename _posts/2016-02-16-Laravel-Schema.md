@@ -10,4 +10,5 @@ Easy:
 
 Laravel Schema Designer
 
-http://laravelsd.com/
+[Laravel Schema Designer](http://laravelsd.com/) 
+
