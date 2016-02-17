@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Git Strategy"
-date: 2016-02-117
+date: 2016-02-17
 ---
 
 
