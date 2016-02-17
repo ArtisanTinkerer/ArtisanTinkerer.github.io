@@ -6,8 +6,9 @@ date: 2016-02-17
 
 
 Looked at this:
+[Laravel Daily](http://laraveldaily.com/auth-login-how-to-check-more-than-just-emailpassword/)
 
-# http://laraveldaily.com/auth-login-how-to-check-more-than-just-emailpassword/
+
 
 Copied postLogin from AuthenticatesUsers.php to AuthController
 
