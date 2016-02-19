@@ -9,8 +9,7 @@ date: 2016-02-19
 
 I never remember how to do this.
 
-
-https://editor.datatables.net/manual/php/joins#Options
+[Datatables Help](https://editor.datatables.net/manual/php/joins#Options)
 
 
 Parameters - easy database options
@@ -23,11 +22,20 @@ string|array - The column(s) that contain the label for the list of options (i.e
 
 ## This is the PHP
 ```
+//Three parts
+//1
     Field::inst( 'temp_records.area_id' )
                     ->options('areas','id','description', function ($q) {
                         $q->where('areas.deleted_at', null);
                     })
                     ->validator( 'Validate::dbValues' ),
+     
+ //2                 
+     Field::inst( 'areas.description' ),
+     
+     
+ //3 
+       ->leftjoin('areas','areas.id','=','temp_records.area_id' )
 
 ```
 
@@ -52,4 +60,7 @@ Table:
 
 
 
-https://www.datatables.net/forums/discussion/32363/setting-a-where-in-options#latest
+
+[Datatables Discussion](https://www.datatables.net/forums/discussion/32363/setting-a-where-in-options#latest)
+
+
