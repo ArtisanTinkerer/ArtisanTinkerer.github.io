@@ -77,6 +77,11 @@ $('#submit').addClass("btn-success");
 $('#submit').removeClass("btn-success");
 ```
 
+## Enable/Disable Button
+
+$("#create").attr('disabled','disabled');
+$("#create").removeAttr('disabled');
+
 
 
 
