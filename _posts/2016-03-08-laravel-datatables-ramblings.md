@@ -1,3 +1,10 @@
+---
+layout: post
+title: "CRUD - Datatables or Laravel"
+date: 2016-03-10
+---
+
+
 # Datatables or Laravel
 
 How do I handle CRUD applications? Let Datatables do thw work? Let Laravel do the work via a REST interface?
