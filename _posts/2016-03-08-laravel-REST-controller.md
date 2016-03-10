@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Rest Controller Methods"
+date: 2016-03-08
+---
+
 # Laravel REST Contoller
 
 ## I never remember these methods, so here they are:
