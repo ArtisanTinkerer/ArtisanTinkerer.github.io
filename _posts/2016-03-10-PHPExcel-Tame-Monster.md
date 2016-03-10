@@ -68,23 +68,39 @@ $destinationPath = 'uploads'; // upload path
             die('Error loading file: '.$e->getMessage());
         }
         
-        ```
+```
         
         
-        ## Then I did some tinkering.
+## Then I did some tinkering.
         
-        ```
+        
+```
         $sheet = $objPHPExcel->getActiveSheet();
         $sheet->getCell('C1')->getValue();
-        ```
+```
+        
         
         Looks like I can get the data out!
         
+        $objPHPExcel->setActiveSheetIndex(0)->getHighestRow();
+
         
         
+ [link Reading] (https://github.com/PHPOffice/PHPExcel/blob/681c30b2ea3871ba8d9e484b4400edccba377ee0/Documentation/markdown/Overview/07-Accessing-Cells.md)
         
-        [link Reading] (https://github.com/PHPOffice/PHPExcel/blob/681c30b2ea3871ba8d9e484b4400edccba377ee0/Documentation/markdown/Overview/07-Accessing-Cells.md)
+# The Old Conundrum
+ 
+ Looks like I need to use:
+ 
+        getOldCalculatedValue
         
+ Otherwise, I get the forumla! 
+ 
+ This converned me for a while, until I read this:
+ 
+ However - Note that when you save a workbook in MS Excel itself, it calculates the result for all formulae and stores the result in the workbook. This is the result returned by getOldCalculatedValue(). However, not all spreadsheet programs do this: OOCalc does; Gnumeric doesn't; Multiplan (SYLK) or CSV files don't hold this old calculated value either. If the loaded workbook hasn't done this calculation on save, then getOldCalculatedValue() will return a null.
+
+So basically getOldCalculatedValue gets a value which Excel has cached.
 
 
         
