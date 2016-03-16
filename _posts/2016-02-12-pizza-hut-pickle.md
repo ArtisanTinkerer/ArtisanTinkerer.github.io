@@ -18,11 +18,7 @@ Then this:
 
 Then followed these steps:
 
-Created the index using Tinker:
-
-App\Product::createIndex($shards = null, $replicas = null);
-
-### 1 Fire this in the command line:
+### 1 Fire this in the command line (really, the command line):
 
 ```
 
