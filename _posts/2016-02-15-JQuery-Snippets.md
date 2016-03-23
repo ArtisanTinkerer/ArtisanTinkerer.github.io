@@ -82,6 +82,15 @@ $('#submit').removeClass("btn-success");
 $("#create").attr('disabled','disabled');
 $("#create").removeAttr('disabled');
 
+## Lost Focus
+
+
+$( ".typeahead" ).blur(function() {
+}
+
+
+
+
 
 
 
