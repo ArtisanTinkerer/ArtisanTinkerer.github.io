@@ -54,6 +54,10 @@ git fetch --all
 git reset --hard origin/master
 
 
+##Removing tracked files
+http://source.kohlerville.com/2009/02/untrack-files-in-git/
+
+git update-index --assume-unchanged [path]
 
 
 
