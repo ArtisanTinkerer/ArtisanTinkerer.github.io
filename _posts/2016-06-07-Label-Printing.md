@@ -4,7 +4,7 @@ title: "Datamax Label Printing"
 date: 2016-06-07
 ---
 #The PHP
-
+```
     private $socket;
     private $port = "9100";
     private  $host = "10.0.4.151";
@@ -93,7 +93,7 @@ date: 2016-06-07
 
     }
     
-  
+```  
  
  
  
