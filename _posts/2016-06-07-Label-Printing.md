@@ -3,7 +3,10 @@ layout: post
 title: "Datamax Label Printing"
 date: 2016-06-07
 ---
-#The PHP
+
+# The PHP
+
+
 ```
     private $socket;
     private $port = "9100";
