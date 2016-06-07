@@ -3,7 +3,6 @@ layout: post
 title: "Datamax Label Printing"
 date: 2016-06-07
 ---
-
 #The PHP
 
     private $socket;
@@ -94,8 +93,11 @@ date: 2016-06-07
 
     }
     
-    
- ## The command to store the image
+  
+ 
+ 
+ 
+## The command to store the image
     <STX>n<CR><LF>
     <STX>M1500<CR><LF>
     <STX>V0<CR><LF>
