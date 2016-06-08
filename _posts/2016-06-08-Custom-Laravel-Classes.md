@@ -10,6 +10,6 @@ date: 2016-06-08
 
 app/Libraries/Company_Name
 
-## namespace at the top
+## Namespace at the top
 
-namespace App\Libraries\Churchill;
+namespace App\Libraries\Company_Name;
