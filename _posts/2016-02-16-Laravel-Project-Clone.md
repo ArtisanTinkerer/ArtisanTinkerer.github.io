@@ -22,12 +22,14 @@ git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/glostselection
 
 # The MySQL Stuff
 create database live_lookup;
+
 GRANT SELECT, INSERT, DELETE, CREATE,AlTER ON live_lookup.* username IDENTIFIED BY 'blahblaf'
+
 php artisan migrate
 
+# The Linux Stuff
 
-
-
+sudo chown -R apache:www utils
 
 # The GIT stuff
 based on http://nvie.com/posts/a-successful-git-branching-model/
