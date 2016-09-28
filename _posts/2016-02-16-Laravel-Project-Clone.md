@@ -17,7 +17,15 @@ git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/glostselection
 4. copy the .env 
 
 
-There maybe some problems with Auth stuff because I have changed the login to username and added the permissions stuff in AuthenticatesUsers.php.
+
+
+
+# The MySQL Stuff
+create database live_lookup;
+GRANT SELECT, INSERT, DELETE, CREATE,AlTER ON live_lookup.* username IDENTIFIED BY 'blahblaf'
+php artisan migrate
+
+
 
 
 
