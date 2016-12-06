@@ -16,9 +16,25 @@ My next project is to create a dashboard application. This needs to be as flexib
 I have made some good progress with the frontend, we really wanted resizable, drag and drop widgets (hate that word, but don't know what else to use)
 . I have got this working, using Gridstack.js and Vue.js (also my first Vue project!).
 
+##AJAX
+
+Since I am now using Vue, I figured I should be using Axios, seems pretty simple so far:
+```
+ axios.get('/dashboardWidgets?dashboard=1')
+
+
+                    .then(function (response) {
+                        console.log(response);
+                        alert('Done');
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+```                   
+                    
+
 ### Assets
 I have also started to use Laravel Elixir (which uses gulp) to build and version my assets! This is a great step forward and will now do it in all my projects. 
-
 
 
 ##Progress
