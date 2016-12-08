@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My First API"
+title: "Dashboard Project - My First API"
 date: 2016-12-06
 ---
 
@@ -37,10 +37,29 @@ Since I am now using Vue, I figured I should be using Axios, seems pretty simple
 I have also started to use Laravel Elixir (which uses gulp) to build and version my assets! This is a great step forward and will now do it in all my projects. 
 
 
+###Vue.js
+
+I am using Vue compponents for each type of dashboard widget;
+```
+  Vue.component('gauge-widget', {
+            props: ['widget'],
+            template:
+            '<div class="grid-stack-item":data-gs-x="widget.x" :data-gs-y="widget.y" :data-gs-width="widget.width" :data-gs-height="widget.height" :id-for-save="widget.id">'+
+            '<div class="grid-stack-item-content"  :id="widget.contentId"></div>'+
+            '</div>'
+
+        });
+```
+
+
 ##Progress
 
 I'm just refactoring the front end, the JS is all in the Blade template and I need to move it out now it is working.
-I was watching some Laracon videos and saw in this [Amanda Folson - Laracon Talk](https://streamacon.com/video/laracon-us/amanda-folson-apis-with-lumen)
-that she suggested using Fractal, so I m currently trying to get that working.
 
-I'm also reading *Build APIS You Won't Hate* (Phil Sturgeon).
+I was watching some Laracon videos and saw in this [Amanda Folson - Laracon Talk](https://streamacon.com/video/laracon-us/amanda-folson-apis-with-lumen) that she suggested using Fractal, so I m currently trying to get that working.
+
+
+
+
+
+
