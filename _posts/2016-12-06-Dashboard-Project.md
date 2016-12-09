@@ -58,6 +58,25 @@ I'm just refactoring the front end, the JS is all in the Blade template and I ne
 
 I was watching some Laracon videos and saw in this [Amanda Folson - Laracon Talk](https://streamacon.com/video/laracon-us/amanda-folson-apis-with-lumen) that she suggested using Fractal, so I m currently trying to get that working.
 
+##Refactoring
+
+I have just refactored the front end and was really struggling with JS timings (what a surprise), my Datatable was not initialising because the table wasn't rendered at this point.
+
+I have just got round this by using the Vue updated event instead of mounted.
+```
+    updated: function () {
+
+        var self = this;
+        self.tablesList.forEach(initialiseTable);
+
+        alert('Bingo');
+
+    },
+```
+
+This is working, just not sure this is the best place to put it.
+
+All my Vue components are now Single File Components and Gulp Watch is running and working!
 
 
 
