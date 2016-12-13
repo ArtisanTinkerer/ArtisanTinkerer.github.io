@@ -79,6 +79,16 @@ This is working, just not sure this is the best place to put it.
 All my Vue components are now Single File Components and Gulp Watch is running and working!
 
 
+# Vue.js and Datatables and TDD
+
+Right, I have been watching Adam Wathan's talk from Laracon on TDD and am going to try and implement this in this project.
+
+I have been using Datatables in a few projects and I now want to try and use it inconjunction with Vue.js. This will mean rewriting the way I have previously been doing Datatables. This was written a year ago when I was new to Laravel, so I am going to see if I can improve it.
+
+I found this [Making VueJS and Datatables Play Nice](http://willvincent.com/blog/making-vuejs-and-datatables-play-nice) from @WillVincent but I think I'm going to try and write mine from scratch. I want to use Datatables AJAX function to edit the data and hopefully it will improve my Vue.js skills.
+
+I guess the first step is to create the component. 
+
 
 
 
