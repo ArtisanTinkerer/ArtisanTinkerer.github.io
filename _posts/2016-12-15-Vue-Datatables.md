@@ -8,6 +8,9 @@ date: 2016-12-15
 
 Since I am currently learning Vue.js, I decided to create a component for Datatables. Obviously using Laravel.
 
+I have seen other ways of doing this, but I want to be able to use the Datatables Editor.
+
+
 ## Progress
 
 I still have a lot to do, but the basics are working.
