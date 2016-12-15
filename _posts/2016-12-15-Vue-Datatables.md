@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Creating a Datatables Vue Component"
-date: 2016-02-15
+date: 2016-12-15
 ---
 
 # Creating a Datatables Vue Component
