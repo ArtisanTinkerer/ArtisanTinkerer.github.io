@@ -4,7 +4,7 @@ title: "Creating a Datatables Vue Component"
 date: 2016-12-15
 ---
 
-# Creating a Datatables Vue Component
+
 
 Since I am currently learning Vue.js, I decided to create a component for Datatables. Obviously using Laravel.
 
