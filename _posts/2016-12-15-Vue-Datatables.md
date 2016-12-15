@@ -61,7 +61,7 @@ HTML:
 ```
  
  
- I hate the way I am building these arrays to make the response.
+
  
  My Datatables Class:
  
@@ -124,10 +124,12 @@ HTML:
 }
  
 ```
+ I hate the way I am building these arrays to make the response.
  
  and here is the Vue component:
  
 ```
+
  <template>
     <div class="container">
         <div class="panel panel-primary">
@@ -250,6 +252,6 @@ HTML:
 </script>
 
  
- ```
+```
  
  
