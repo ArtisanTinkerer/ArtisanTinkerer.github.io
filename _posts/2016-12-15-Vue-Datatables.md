@@ -27,7 +27,7 @@ HTML:
     
   Controller:
   
- ```
+```
   public function tableSetup()
     {
         $dt = new Datatable("widgets", "Widgets");//table and panel title
