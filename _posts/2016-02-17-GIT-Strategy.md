@@ -4,8 +4,46 @@ title: "Git Strategy"
 date: 2016-02-17
 ---
 
+# Laracasts Tips
 
-Git Strategy
+## Fixing Mistakes
+
+* fix
+* add again
+* commit
+
+**or**
+
+* copy the original commit - the one before
+
+1, git reset --hard hfjdshfjkds
+ 
+ gets rid of the commit and the changes
+
+2, git reset --soft hfjdshfjkds
+
+gets rid of commit and code changes
+
+**or**
+
+* git add
+* git commit --amend
+
+This will just fix the commit, with your changes. 
+
+**Use the present tense for messages**
+
+"If you can describe the change you have made, then your should commit it"
+
+"when you hit a milestone"
+
+
+
+
+
+
+
+## Git Strategy
 http://nvie.com/posts/a-successful-git-branching-model/
 
 3 Branches
