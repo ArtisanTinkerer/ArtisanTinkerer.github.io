@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Artisan Migrate:rollback Fails"
 date: 2016-02-17
 ---
