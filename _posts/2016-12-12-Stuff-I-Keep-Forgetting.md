@@ -10,5 +10,4 @@ date: 2016-12-12
 ```
 php artisan make:controller PhotoController --resource
 
-
 ```
