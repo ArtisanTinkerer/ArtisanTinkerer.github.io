@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Laravel Cheatsheet"
 date: 2016-02-18
 ---
