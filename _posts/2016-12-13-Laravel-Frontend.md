@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Laravel Frontend"
 date: 2016-12-13
 ---
