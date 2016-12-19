@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Dashboard Project - My First API"
 date: 2016-12-06
 ---
