@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "JQuery Snippets"
 date: 2016-02-15
 ---
