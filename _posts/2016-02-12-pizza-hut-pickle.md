@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "The Pizza Hut Pickle"
 date: 2016-02-12
 ---
