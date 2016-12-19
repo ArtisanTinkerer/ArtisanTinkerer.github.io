@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Datamax Label Printing"
 date: 2016-06-07
 ---
