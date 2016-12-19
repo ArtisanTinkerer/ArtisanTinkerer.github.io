@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Custom Laravel Class"
 date: 2016-06-08
 ---
