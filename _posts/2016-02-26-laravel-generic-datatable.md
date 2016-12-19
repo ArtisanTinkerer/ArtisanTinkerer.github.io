@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "One Blade (template) To Rule Them"
 date: 2016-02-26
 ---
