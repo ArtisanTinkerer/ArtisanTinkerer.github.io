@@ -4,7 +4,7 @@ title: "Eloquent Notes"
 date: 2016-12-15
 ---
 
-Eloquent Notes From Laravel Up and Running
+# Eloquent Notes From Laravel Up and Running
 
 * always use ->get()
 * returns collection
