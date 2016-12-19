@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Creating a Datatables Vue Component"
 date: 2016-12-15
 ---
