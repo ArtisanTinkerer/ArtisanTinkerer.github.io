@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Clone Laravel Project"
 date: 2016-02-16
 ---
