@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Extra Laravel Login Conditions"
 date: 2016-02-17
 ---
