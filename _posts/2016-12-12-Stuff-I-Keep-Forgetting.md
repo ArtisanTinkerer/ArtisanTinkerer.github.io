@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Stuff I Keep Forgetting"
 date: 2016-12-12
 ---
