@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Databables - Lookup Field Felect "
 date: 2016-02-19
 ---
