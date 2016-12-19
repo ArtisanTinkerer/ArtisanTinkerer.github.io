@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Git Strategy"
 date: 2016-02-17
 ---
