@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Rest Controller Methods"
 date: 2016-03-08
 ---
