@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Laravel redirect all mistyped URLS"
 date: 2016-08-11
 ---
