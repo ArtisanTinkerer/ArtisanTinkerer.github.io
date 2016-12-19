@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Connecting to an Oracle DB"
 date: 2016-03-17
 ---
