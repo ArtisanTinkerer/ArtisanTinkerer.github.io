@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Eloquent Notes"
 date: 2016-12-15
 ---
