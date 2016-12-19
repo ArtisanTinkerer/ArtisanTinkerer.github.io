@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "CRUD - Datatables or Laravel"
 date: 2016-03-10
 ---
