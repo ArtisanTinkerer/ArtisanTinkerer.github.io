@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Laravel Schema"
 date: 2016-02-16
 ---
