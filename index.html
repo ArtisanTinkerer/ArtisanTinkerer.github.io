@@ -9,4 +9,10 @@ title: The Artisan Tinkerer
   </div>
 </div>
 
-[Test Link](2016-02-12-just-testing.md)
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
