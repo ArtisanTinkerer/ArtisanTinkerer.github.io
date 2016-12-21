@@ -3,11 +3,16 @@ layout: index
 title: The Artisan Tinkerer
 ---
 
-	
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
+
+
   <h1>Blog Index</h1>
 		
 
-<table>
+<table id="indexTable">
 
 	<tr>
 		<th>Date</th>
@@ -27,3 +32,10 @@ title: The Artisan Tinkerer
 	</table>
 	
 	<br>
+
+
+<script>
+$(document).ready(function(){
+    $('#indexTable').DataTable();
+});
+</script>
