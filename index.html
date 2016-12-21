@@ -29,9 +29,9 @@ title: The Artisan Tinkerer
 	<tr>
 		
 	    <td>{{ post.date | date_to_string }}</td>
-	    <td>{{ post.title }}</td>
+	      <td><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></td>
 		
-	<tr>
+	</tr>
 	  {% endfor %}
 
 	
