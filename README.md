@@ -1,4 +1,7 @@
 # ArtisanTinkerer.github.io
 
 ## Blog
-Test
+
+
+Just to document my learning and #lunchtimelearning.
+
