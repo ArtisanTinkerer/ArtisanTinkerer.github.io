@@ -17,11 +17,13 @@ title: The Artisan Tinkerer
 		
 
 <table id="indexTable">
-
+	<thead>
 	<tr>
 		<th>Date</th>
 		<th>Title</th>
 	</tr>
+		</thead>
+	<tbody>
 	
 	  {% for post in site.posts %}
 	<tr>
@@ -32,10 +34,14 @@ title: The Artisan Tinkerer
 	<tr>
 	  {% endfor %}
 
-	
+	</tbody>
 	</table>
 	
 	<br>
+
+$(document).ready(function(){
+    $('#indexTable').DataTable();
+});
 
 
 
