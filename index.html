@@ -7,11 +7,23 @@ title: The Artisan Tinkerer
   <h1>Blog Index</h1>
 		
 
-<ul class="posts">
+<table>
 
+	<tr>
+		<th>Date</th>
+		<th>Title</th>
+	</tr>
+	
 	  {% for post in site.posts %}
-	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	<tr>
+		
+	    <td>{{ post.date | date_to_string }}</td>
+	    <td><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></td>
+		
+	<tr>
 	  {% endfor %}
-	</ul>
+
+	
+	</table>
 	
 	<br>
