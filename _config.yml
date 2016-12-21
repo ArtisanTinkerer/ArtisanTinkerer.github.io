@@ -1,3 +1,3 @@
 name: Artisan Tinkerer
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-modernist
