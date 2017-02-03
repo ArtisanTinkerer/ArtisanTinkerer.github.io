@@ -87,6 +87,21 @@ Like this:
 
 
 
+# Notes From Laracasts
+
+Lesson 1 
+
+** Bind data to input **
+v-model is for form inputs only
+
+```
+v-model = "message"
+{{message}}
+data:{
+  message:'sadsa'
+  }
+```
+
 
 
 
