@@ -1,9 +1,10 @@
-
 ---
 layout: post
 title: "Learning Vue"
 date: 2016-03-02
 ---
+
+
 
 # Declarative Rendering
 ```
@@ -102,7 +103,8 @@ data:{
   }
 ```
 
-## computed properties
+## Episode 7 
+<slots>
 
 
 
