@@ -105,6 +105,22 @@ data:{
 
 ## Episode 7 
 <slots>
+Slots can be filled from above:
+
+```
+ <ch-widget-editor widget-types="{{$widgetTypes}}" v-if="showModal" @close="showModal = false">
+
+     <h3 slot="header">custom header</h3>
+
+  </ch-widget-editor>
+```
+
+```
+ <slot name="header">
+      default header
+  </slot>
+```
+
 
 
 
