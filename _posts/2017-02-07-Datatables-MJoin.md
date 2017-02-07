@@ -63,7 +63,15 @@ I now have data_sources in the JSON.
 
 ## Client Side
 
+Add this to columns:
 
+```
+         { data: "access", render: "[, ].name" }
+```
+
+
+
+Now I need a multi select-on the Editor modal - with all the possible data source options, surely this is just the same as using a select with a foreign key.
 
 
 
