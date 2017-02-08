@@ -127,6 +127,92 @@ Slots can be filled from above:
 
 
 
+## Axios
+
+Episode 18
+
+response.data
+this.skills = reponse.data
+
+
+## Object Orientated Forms
+https://laracasts.com/series/learn-vue-2-step-by-step/episodes/19
+
+Form @submit.prevent="onSubmit"
+
+```
+axios.post('projects'.{
+
+  name: this.name 
+  //or
+  this.data
+  
+}
+});
+
+```
+
+** add html required **
+
+Laravel validation
+
+"Just let the server do it"
+
+### Errors
+
+add errors: {} to data
+```
+class Errors{
+
+  constructor(){
+    this.errors = {};
+  }
+  
+  get(field){
+  
+    if (this.errors[field]){
+      retuen this.errors[field][0]
+    }
+    
+  }
+
+
+
+
+
+.catch(error => this.errors.record (error.response.data))
+
+
+```
+
+
+```
+data:{
+
+  errors: new Errors()
+
+}
+
+```
+
+In the view:
+
+```
+<span class="help is-danger" v-text="errors.get('name')"></span>
+```
+
+ 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
