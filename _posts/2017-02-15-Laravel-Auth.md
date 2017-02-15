@@ -1,9 +1,9 @@
-
 ---
 layout: post
 title: "Laravel Auth"
 date: 2017-02-15
 ---
+
 
 # Authentication and Authorisation
 
@@ -32,3 +32,15 @@ $this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 $this->post('password/reset', 'Auth\ResetPasswordController@reset');
 
 ```
+
+## Changing the page shown after logout
+
+LoginController uses AuthenticatesUsers which has a logout function.
+
+Just change the redirect here.
+
+```
+return redirect('/');
+```
+
+
