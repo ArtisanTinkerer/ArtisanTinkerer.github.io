@@ -51,5 +51,8 @@ These need to reside in resources/assets/
 
 
 
+# Gone back to Laravel 5.3.4 and Elixir
+Not got time work on this the moment.
+
 
 
