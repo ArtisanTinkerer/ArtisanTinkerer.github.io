@@ -8,6 +8,8 @@ date: 2017-02-16
 
 # Shortcuts
 
+**ALT F1 1** - Navigate to Project Explorer
+
 **CTRL E** - Open recent
 
 **ALT click sidebar** - Show error
