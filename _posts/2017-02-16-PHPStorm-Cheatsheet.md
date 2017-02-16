@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "PHPStorm Cheatsheet"
 date: 2017-02-16
 ---
