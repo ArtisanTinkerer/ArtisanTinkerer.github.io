@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Laravel Auth"
 date: 2017-02-15
 ---
