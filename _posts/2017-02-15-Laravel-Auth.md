@@ -43,15 +43,7 @@ $this->post('password/reset', 'Auth\ResetPasswordController@reset');
 
 ```
 
-## Changing the page shown after logout
 
-LoginController uses AuthenticatesUsers which has a logout function.
-
-Just change the redirect here.
-
-```
-return redirect('/');
-```
 
 
 
