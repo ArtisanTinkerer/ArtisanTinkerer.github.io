@@ -44,6 +44,12 @@ $this->post('password/reset', 'Auth\ResetPasswordController@reset');
 ```
 
 
+# Adding To a New Application (Dashboard)
+
+Connecting to the User database, to get perms.
+
+* Rules are defined in AuthServiceProvider boot method
+
 
 
 
