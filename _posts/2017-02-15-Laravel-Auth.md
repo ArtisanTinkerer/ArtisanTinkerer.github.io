@@ -7,10 +7,20 @@ date: 2017-02-15
 
 # Authentication and Authorisation
 
-RegisterController
-LoginController
-ForgotPasswordController
-ResetPasswordController
+## RegisterController
+
+## LoginController
+
+This is where we change th redirect after login:
+``` 
+protected $redirectTo = '/home';
+
+```
+
+
+## ForgotPasswordController
+
+## ResetPasswordController
 
 # Auth::routes()
 
@@ -42,5 +52,6 @@ Just change the redirect here.
 ```
 return redirect('/');
 ```
+
 
 
