@@ -129,6 +129,59 @@ All above access controls required Eloquent models,
 Used for access on a particular resource(model).
 
 
+## How Do I Want To Use This?
+
+Define the authorization rules like this:
+
+```
+$gate->define('maintain-images', function($user){
+                return $user->canDo('maintain-images'); 
+        });
+
+```
+
+Then test like this:
+
+```
+$this->authorize('maintain-images');
+```
+
+# Laravel Version
+
+Need to be on 5.3 and the labelling app I am working on is only 5.2.39.
+
+Not sure I want to upgrade, will look at docs for 5.2 authentication.
+
+Just added this to me ImagesController:
+
+
+```
+if (Gate::denies('maintain-images', Image::class)) {
+          return Redirect::back();
+      }
+
+```
+
+## Using with Datatables
+
+This can de dropped into my DatatablesController
+
+```
+        if (Gate::denies($this->table, Image::class)) {
+            return Redirect::back();
+        }
+```
+
+Then add this to the AuthServiceProvider:
+
+```
+$gate->define('staff', function($user,$image){
+            return $user->canDo('staff',$image);
+        });
+
+
+```
+
 
 
 
