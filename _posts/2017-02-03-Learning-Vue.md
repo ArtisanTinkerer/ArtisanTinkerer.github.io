@@ -202,17 +202,67 @@ In the view:
 ```
 
  
+## Communication Between Components
+
+How do I pass my dashboards (and the id of the one to display) from my sidebar, to my dashboard component?
+
+Actually maybe I just need to pass the ID.
+
+[Laracasts](https://laracasts.com/series/learn-vue-2-step-by-step/episodes/12)
+
+### Parent - child communication
+
+HTML
+```
+  <coupon v-on:applied"onCouponApplied"> </coupon>
+
+```
+
+
+```
+this.$emit('applied');
 
 
 
+```
+
+app.js - parent
+
+```
+  methods: {
+        onCouponApplied(){
+
+            alert('I am here');
+        }
+```
 
 
+## Communication between components
 
 
+*app.js*
+```
+window.Event = new Vue();
+
+```
+
+*component 1*
+```
+Event.$emit('applied');
+
+```
+
+*component 2*
+```
+created: function () {
+        console.log('created');
+        Event.$on('applied',() => alert('in dashboard'))
+    },
+
+```
 
 
-
-
+So, I can use this, when I pass the dashboard id from the sidebar.vue to the dashboard.vue
 
 
 
