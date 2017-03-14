@@ -27,3 +27,12 @@ https://laravel.com/docs/5.1/eloquent
 # Two WHEREs
 
 $loss = Loss::where('product_id', '=', $input['product_id'])->where('date_selected', '=', $input['date_selected'])->first();
+
+# Relationship Notes
+
+
+Working on my process loss system, I need to get all the fault buttons for the logged in user.
+I think this will we *Has Many Through*.
+
+User->Process Types->Faults
+
