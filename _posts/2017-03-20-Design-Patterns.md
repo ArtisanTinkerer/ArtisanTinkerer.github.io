@@ -58,12 +58,12 @@ date: 2017-03-20
   The decorator must accept this in the constructor.
   
   
-  ## When is this appropriate.
+## When is this appropriate.
   
   Be careful when using inheritance, may be inheriting a lot whihc you don't need.
   
   
-  ## In my language
+## In my language
   
   Basically you have a core class and when you want to add functionality, you pass an instance of the core class into the constructor of the class with 
   the additional functionality.
@@ -71,7 +71,7 @@ date: 2017-03-20
   
   
   
-  # Adapter 
+# Adapter 
   
   
   
