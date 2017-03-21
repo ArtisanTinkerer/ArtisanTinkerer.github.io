@@ -104,7 +104,7 @@ data:{
 ```
 
 ## Episode 7 
-<slots>
+
 Slots can be filled from above:
 
 ```
@@ -113,19 +113,11 @@ Slots can be filled from above:
      <h3 slot="header">custom header</h3>
 
   </ch-widget-editor>
-```
 
-```
  <slot name="header">
       default header
   </slot>
 ```
-
-
-
-
-
-
 
 ## Axios
 
