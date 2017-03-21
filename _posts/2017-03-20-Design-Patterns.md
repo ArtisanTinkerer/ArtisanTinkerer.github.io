@@ -63,7 +63,7 @@ date: 2017-03-20
   Be careful when using inheritance, may be inheriting a lot whihc you don't need.
   
   
-## In my language
+## My Summary
   
   Basically you have a core class and when you want to add functionality, you pass an instance of the core class into the constructor of the class with 
   the additional functionality.
@@ -72,6 +72,163 @@ date: 2017-03-20
   
   
 # Adapter 
+
+Memory card adapter analogy.
+
+"An adapter allows you to translate one interface for use with another"
+
+
+## Book
+```
+class Book{
+
+ public function open()
+ {
+  var_dump('opening the paper book.');
+ }
+ 
+ public function turnPage()
+ {
+  var_dump('turning the page of the paper book.');
+ }
+
+}
+```
+## Person
+```
+class Person{
+
+ public function read($book)
+ {
+   $book->open();
+   $book->turnPage();
+ }
+ 
+ public function turnPage()
+ {
+  var_dump('turning the page of the paper book.');
+ }
+
+}
+```
+
+Person can read a book.
+
+## Interfaces
+
+```
+interface BookInterface {
+
+  public function open();
+  
+  public function turnPage();
+ 
+}
+
+```
+
+## Person
+```
+class Person{
+
+ public function read(BookInteface $book) //decoupled the code
+ {
+   $book->open();
+   $book->turnPage();
+ }
+ 
+ public function turnPage()
+ {
+  var_dump('turning the page of the paper book.');
+ }
+
+}
+```
+
+Interface for Kindle is different.
+
+Kindle
+
+```
+class Kindle{
+
+ public function turnOn()
+ {
+   var_dump('turn the Kindle on');
+ }
+ 
+ public function pressNextButton()
+ {
+  var_dump('press the next button on the Kindle.');
+ }
+
+
+}
+```
+and associated interface.
+
+```
+interface eReaderInterface {
+
+  public function turnOn();
+  public function pressNextButton()'
+ 
+}
+
+```
+
+Adapter which allows two different classes to communicate.
+This needs to implement the Book functions.
+
+
+```
+class KindleAdapter implements BookInterface
+
+private $kindle;
+
+//inject a Kidle
+public function __construct(Kindle $kindle
+ {
+  $this->kindle = $kindle;
+ }
+
+
+ public function open()
+ {
+   return $this->kindle->turnOn();
+ }
+ 
+ public function turnPage()
+ {
+  return $this->kindle->pressNextButton();
+ }
+
+
+}
+```
+
+## My Summary
+
+So, basically we create an adapter which:
+ 1, implements BookInterface
+ 2, gets a Kindle injected
+ 3, maps the book functions to the the matching Kindle functions
+
+
+Then you can access a Kindle in the same way as a book.
+
+
+
+```
+(new Person)->read(new KindleAdapter(new Kindle))
+```
+
+The adapter allows the Kindle to be used like a Book.
+
+**Without changing the Book code**
+
+
+
   
   
   
