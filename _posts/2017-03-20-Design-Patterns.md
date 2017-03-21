@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Design Patterns"
 date: 2017-03-20
 ---
