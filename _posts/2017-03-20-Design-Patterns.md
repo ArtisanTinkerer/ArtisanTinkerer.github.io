@@ -227,6 +227,64 @@ The adapter allows the Kindle to be used like a Book.
 
 **Without changing the Book code**
 
+# Interface
+
+Good when worried about code duplication.
+
+Example is two classes with similiar functions but one different.
+
+VeggieSub and TurkeySub
+
+Shared methods should be moved to abstract parent 'Sub'.
+Children extend Sub.
+
+The make method is in the parent.
+
+```
+public function make()
+{
+
+  return $this
+   ->layBread()
+   ->addLettuce()
+   ->addTurkey()
+   ->addSauces();
+
+}
+
+Turkey and Veggie Sub classes only contain methods which are unique to them.
+
+
+```
+
+addLettuce and addMeat are the unique methods.
+
+Generalise this to ```addPrimaryToppings()```
+The fact that this is abstract forces ths children to implement it.
+
+```
+protected abstract function addPrimaryToppings(){
+
+}
+
+```
+
+Then make sure that the methods in the children have the same name. (addPrimaryToppings.)
+
+
+## My thoughts.
+
+This is pretty much what I did with the Datatables classes, without adding the abstract methods to the parent.
+This is a pretty obvious way to use inheritance. 
+
+
+# The Strategy Design Pattern
+
+
+
+
+
+
 
 
   
