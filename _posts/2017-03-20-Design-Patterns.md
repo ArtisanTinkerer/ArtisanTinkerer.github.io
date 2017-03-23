@@ -280,6 +280,84 @@ This is a pretty obvious way to use inheritance.
 
 # The Strategy Design Pattern
 
+## Define a family ot algorithms
+
+"Multiple strategies to execute a single task."
+
+Eg logging - to file or to db or e-mail
+
+```
+class LogToFile{
+
+}
+
+
+class LogToDatabase{
+
+}
+
+
+class LogToXWebService{
+
+}
+
+```
+
+## Encapsulate and make them interchangeable
+
+Create an interface!
+
+```
+interface Logger {
+
+ public function log($data);
+
+}
+
+```
+
+So now all the other classes can implement this:
+
+```
+class LogToDatabase implements Logger{
+
+  public function log($data){
+    var_dump('Log to db');
+  }
+  
+}
+
+```
+
+Because we code to an interface, this allows the classes to be interchangeable.
+
+```
+class App{
+
+ public function log($data, Logger $logger)
+ {
+
+   $logger->log($data)
+   
+ }
+
+
+$app = new App;
+
+$app->log('Some info', new LogToFile);
+
+
+```
+
+## In my words.
+
+Just use an interface for a family of classes, this forces them to use the same methods and 
+makes them interchangeable. (Polymorphism.)
+
+# The Chain or Responsibility
+
+
+# Go through the SOLID course
 
 
 
