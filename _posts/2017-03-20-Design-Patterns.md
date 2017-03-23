@@ -280,7 +280,7 @@ This is a pretty obvious way to use inheritance.
 
 # The Strategy Design Pattern
 
-## Define a family ot algorithms
+## Define a family of algorithms
 
 "Multiple strategies to execute a single task."
 
