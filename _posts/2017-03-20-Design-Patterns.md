@@ -357,6 +357,88 @@ makes them interchangeable. (Polymorphism.)
 # The Chain or Responsibility
 
 
+
+```
+//this forces all the classes to have a check methid
+abstract class HomeChecker {
+
+ protected $sucessor;
+
+ public abstract function check(HomeStatus $home);
+ 
+ public function succeedWith(HomeChecker $home){
+ 
+  $this->successor = $sucessor
+ }
+ 
+ public function next(HomeStatus $home){
+ 
+ if($this->successor)
+ 
+ {
+  $this->successor->check($home);
+  }
+ 
+ }
+ 
+}
+
+class Locks extends HomeChecker {
+
+ public function check(HomeStatus $home)
+ {
+   if (!$home->locked)
+   {
+    throw new Exception('The doors are not locked');
+   }
+   
+   $this->next(home);
+
+ }
+
+}
+
+class Lights extends HomeChecker{
+
+
+}
+
+class Alarms extends HomeChecker{
+
+
+}
+
+class HomeStatus {
+ public $alarmOn = true;
+ public $locked = true;
+ public $lightsOff = true;
+ 
+}
+
+//first set up objects
+//distinction betwwen decorator, is that any object can slice through the chain
+$locks = new Locks;
+$lights = new Lights;
+$alarm = new Alarm;
+
+$locks->succeedWith($lights);
+$lights->succeedWith($alarm);
+
+
+$status = new HomeStatus;
+
+
+$locks->check(new HomeStatus);
+
+
+```
+
+
+If the check function passes, the next function is called and then the check function of the succesor.
+
+
+
+
 # Go through the SOLID course
 
 
