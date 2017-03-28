@@ -436,7 +436,46 @@ $locks->check(new HomeStatus);
 
 If the check function passes, the next function is called and then the check function of the succesor.
 
+# The Specification Pattern
 
+Default to not using.
+
+Business rule -eg Gold Customer
+
+"A customer specification"
+```
+class CustomerIsGold {
+
+ public function isSatisfiedBy(Cuustomer $customer)
+ 
+ {
+   return $customer->type =='gold';
+ 
+ 
+ }
+
+}
+
+```
+
+*Could just be isGold on Customer*
+Test
+
+```
+
+ $specification = new CustomerIsGold;
+ 
+ $goldCustomer = new Customer('gold');
+ 
+ $specification->isSatisfiedBy($goldCustomer)
+
+```
+
+# The Observer Pattern
+
+One of the most popular.
+
+1-2-1 dependency
 
 
 # Go through the SOLID course
