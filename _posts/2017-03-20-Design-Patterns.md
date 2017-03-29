@@ -475,10 +475,94 @@ Test
 
 One of the most popular.
 
-1-2-1 dependency
+1-2-1 dependency, so that when one object changes, it's dependents are notified.
+
+eg discussion, notify when comments added
+
+```
+interface Subject { //Subscriber
+
+  public function attach($observer);
+  public function detach($observer);
+  public function notify();
+
+}
+
+interface Observer { //Publisher
+
+ public function handle();
+ 
+}
 
 
-# Go through the SOLID course
+
+
+```
+
+Basic event system.
+
+## Using in Laravel
+
+```
+
+Event::listen(`user.login`), function()
+{
+ var_dump('fire off an email');
+});
+
+
+Event::listen(`user.login`), function()
+{
+ var_dump('do some reporting');
+});
+
+get('/', function()
+{
+ Event::fire('user.login');
+});
+```
+in a controller:
+
+```
+class HomeController {
+
+ public function index(Dispatcher $dispatcher)
+ 
+ {
+  $dispatcher->fire('UserHasLoggedIn');
+ }
+
+}
+
+```
+
+### Listeners
+
+1, In a Listeners folder
+```
+class EmailNotifier{
+
+ public function handle()
+ {
+  var_dump('fire off an email');
+ }
+
+
+}
+
+```
+
+add to EventServiceProvider
+
+```
+protected $listen = [
+ 'UserHasLoggedIn' => [
+    'App\Listeners\EmailNotifier',
+ ],
+];
+
+```
+
 
 
 
