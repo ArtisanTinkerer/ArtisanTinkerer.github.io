@@ -569,6 +569,51 @@ protected $listen = [
 
 
 
+# The Repository Pattern
+
+
+[http://vegibit.com/laravel-repository-pattern/](http://vegibit.com/laravel-repository-pattern/)
+
+
+"But the controller is tightly coupled to Eloquent"
+
+### 1 Create Repository Folder - within app folder
+
+### 2 Create the Interface
+Create the interface, this will determine the contract for out repository
+
+```
+interface HouseRepositoryInterface {
+	
+	public function selectAll();
+	
+	public function find($id);
+	
+}
+
+```
+
+
+### 3 Create Repository
+
+This is where all the Eloquent queries go.
+
+```
+class DbHouseRepository implements HouseRepositoryInterface {
+	
+	public function selectAll()
+	{
+		return House::all();
+	}
+	
+	public function find($id)
+	{
+		return House::find($id);
+	}
+}
+```
+
+### 4 Create Backend Service Provider
 
 
 
