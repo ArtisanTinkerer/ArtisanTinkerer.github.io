@@ -78,7 +78,8 @@ Steps:
   
 ## The Gate Facade
 
-* Simplest way to test against rule.
+* Simplest way to test against rule.*
+
 ```
 If(Gate::allows('update-contact',$contact)){
   //Update contact
