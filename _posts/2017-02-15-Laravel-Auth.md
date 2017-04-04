@@ -132,20 +132,47 @@ Used for access on a particular resource(model).
 
 ## How Do I Want To Use This?
 
-Define the authorization rules like this:
+### Amend AuthServiceProvider boot:
 
 ```
-$gate->define('maintain-images', function($user){
-                return $user->canDo('maintain-images'); 
+
+    public function boot(GateContract $gate)
+    {
+        $this->registerPolicies($gate);
+
+        //These are the auth rules, normally they are for
+        // a table and are obtained from the Web User Manager
+        $gate->define('drawings', function($user){
+            return $user->canDo('drawings');
         });
+    }
 
 ```
 
-Then test like this:
+I was getting: ```Class App\Providers\GateContract does not exist ```
+
+So I added this:
 
 ```
-$this->authorize('maintain-images');
+use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+
 ```
+
+### Add these to the index functions in the controllers:
+
+```
+if (Gate::denies('auth_codes', Image::class)) {
+            return Redirect::back();
+        }
+```
+
+
+
+
+
+
+
+
 
 # Laravel Version
 
@@ -162,6 +189,11 @@ if (Gate::denies('maintain-images', Image::class)) {
       }
 
 ```
+
+
+
+
+
 
 ## Using with Datatables
 
