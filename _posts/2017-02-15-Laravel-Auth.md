@@ -11,7 +11,7 @@ date: 2017-02-15
 
 ## LoginController
 
-This is where we change th redirect after login:
+This is where we change the redirect after login:
 ``` 
 protected $redirectTo = '/home';
 
