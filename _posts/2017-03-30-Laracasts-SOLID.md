@@ -142,18 +142,27 @@ Interface is a contract.
 
 Polymorphism - sharing a common interface,
 
-#Liskov Substitution
+# Liskov Substitution
+
+"Code to an interface".
+
+
+"Derived classes must be substitutable for their base classes"
+
+
+- functions in derived classes should return same things
+- so consumer recieves same thing
+- instanceof suggests breaking LSP
+- comment in the interface what should be returned
+
+
+# Interface Segregation
 
 
 
 
 
-
-
-
-
-
-
+# Watch Repositories
 
 
 
