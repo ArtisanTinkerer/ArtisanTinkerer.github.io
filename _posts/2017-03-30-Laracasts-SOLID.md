@@ -159,6 +159,54 @@ Polymorphism - sharing a common interface,
 # Interface Segregation
 
 
+"A client should not be forced to implement an interface that it doesn't use."
+
+Star Trek example.
+
+```
+interface WorkerInterface{
+  public function work();
+  public function sleep();
+}
+
+class HumanWorker implements WorkerInterface{
+
+  public function work(){
+  
+  }
+  
+  public function sleep(){
+  
+  }
+
+}
+
+
+class Captain {
+  public function manage(Worker $worker){
+    $worker->work();
+    $worker->sleepk();
+  }
+  
+}
+
+```
+Now we want to employ androids - they don't sleep.
+
+Should not be forced to implemet sleep method. - Violates interface segregation
+
+## Solution
+Create two interfaces: WorkableInterface and SleepableInterface
+``` HumanWorker implements  WorkableInterface, SleepableInterface ```
+
+``` AndroidWorker implements  WorkableInterface ```
+
+** Not sure i get the final stage of this**
+
+
+# Dependency Inversion
+
+
 
 
 
