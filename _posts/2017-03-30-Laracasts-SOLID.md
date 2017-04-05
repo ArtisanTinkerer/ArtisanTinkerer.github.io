@@ -213,5 +213,5 @@ Create two interfaces: WorkableInterface and SleepableInterface
 # Watch Repositories
 
 
-
+https://scotch.io/bar-talk/s-o-l-i-d-the-first-five-principles-of-object-oriented-design
 
