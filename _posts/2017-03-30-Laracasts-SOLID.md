@@ -201,13 +201,56 @@ Create two interfaces: WorkableInterface and SleepableInterface
 
 ``` AndroidWorker implements  WorkableInterface ```
 
-** Not sure i get the final stage of this**
+** Not sure i get the final stage of this **
 
 
 # Dependency Inversion
 
 
+"Depend on abstractions, not on concretions"
 
+- not dependency injection
+- high level modules should not depend on low level modules
+- should depend on abstractions
+- comes down to decoupling code
+
+## High level Code
+  Not concerned with details
+
+## Low level Code
+  More concerned with details and specifics.
+
+One class should not be forced to depend upon an implementation.
+Should depend on abstract, contract or interface
+
+Plugs and sockets, not wiring to wire.
+
+House provides outlet (intercace).
+Anything which requires power must get it through this interface.
+
+Example: 
+Passing MYSQL connection to PasswordReminder. - bad, why does PasswordReminder care about the db?
+
+High level modules (PasswordReminder) should not depend on low level modules (MySQLConnection).
+
+High level modules should depend on abstractions. 
+
+** Instead code to an interface. **
+
+```
+interface ConnectionInterface {
+  public function connect();
+}
+
+
+```
+
+Now PasswordReminder can depend on a ConnectionInterface.
+
+
+```
+public function __construct(ConnectionInterface $dbConnection)
+```
 
 
 # Watch Repositories
