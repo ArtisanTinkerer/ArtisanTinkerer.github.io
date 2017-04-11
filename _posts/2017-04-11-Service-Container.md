@@ -174,11 +174,11 @@ public function register(){
 ## Service Providers ##
 
 Just popped back to page 227
-
-
 Almost all of Laravels bootstrap is separted  into service providers.
 A service provider is a class that encapsulates logic for various parts of the application need to run to bootstrap.
+
 ** Code which needs to run in preparation for the application to run. **
+They have boot() and register() methods.
 
 
 
