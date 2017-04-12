@@ -51,6 +51,16 @@ Application environment is always testing.
 
 
 
+# New Calendar Application #
+
+OK, I am strting a new application. This is a small calendar application so will try TDD.
+
+Hmmm Laravel Dusk has appeared. I am following these instructions.
+
+https://mattstauffer.co/blog/introducing-laravel-dusk-new-in-laravel-5-4
+
+
+Started trying to fix but ran out of space on my dev server....
 
 
 
