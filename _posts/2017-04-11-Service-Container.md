@@ -183,7 +183,7 @@ They have boot() and register() methods.
 
 
 
-
+Interfaces can be bound, instead of classes.
 
 
 
