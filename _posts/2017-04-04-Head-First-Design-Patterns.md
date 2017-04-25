@@ -8,7 +8,7 @@ Just making some notes as I attempt to work through this book and start using re
 
 # Strategy
 
-<img src="images/Strategy.png" alt="hi" class="inline"/>
+<img src="/images/Strategy.png" alt="hi" class="inline"/>
 
 
 # Observer
