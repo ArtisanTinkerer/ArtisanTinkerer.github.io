@@ -27,9 +27,11 @@ Decorate your classes at runtime using a form of object composition.
 
 Example is zillion types of Starbucks all * with * different additions ** EspressoWithSteamedMilkandMocha **.
 
+Identify areas which may change.
 
-
-
+1 Take a DarkRoast object
+2 Decorate it with a Mocha object
+3 Decorate it with a Whip 
 
 
 
