@@ -34,6 +34,10 @@ Identify areas which may change.
 3 Decorate it with a Whip 
 
 
+<img src="/images/Decorator.png" alt="missing" class="inline"/>
+
+
+
 
 # Notes
 
@@ -45,7 +49,7 @@ Favor composition over inheritance
 Program to interfaces not implementations
 Strive for loosely coupled designs between objects that interact
 
-** Code should be closed to to change, tey open to extension  **
+** Code should be closed to to change,  open to extension  **
 
 
 ## Design Principle
