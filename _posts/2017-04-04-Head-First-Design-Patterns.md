@@ -36,6 +36,8 @@ Identify areas which may change.
 
 <img src="/images/Decorator.png" alt="missing" class="inline"/>
 
+https://sourcemaking.com/design_patterns/decorator/php
+
 
 
 
