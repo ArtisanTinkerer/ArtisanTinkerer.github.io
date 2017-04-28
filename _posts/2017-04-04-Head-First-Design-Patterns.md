@@ -38,6 +38,8 @@ Identify areas which may change.
 
 https://sourcemaking.com/design_patterns/decorator/php
 
+https://sourcemaking.com/design_patterns
+
 
 
 
