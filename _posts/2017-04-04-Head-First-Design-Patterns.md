@@ -67,13 +67,61 @@ pizza = factory.createPizza(type);
 
 <img src="/images/Simple Factory.png" alt="missing" class="inline"/>
 
+Got the simplw one working OK.
+
+
 Tie the store and the factory together.
 
 
-
+** Come back to this **
 Pg - 139.
 
 
+# The Singleton Pattern
+
+* One of a Kind Objects - only one instance *
+
+The PHP Way:
+```
+// General singleton class.
+class Singleton {
+  // Hold the class instance.
+  private static $instance = null;
+  
+  // The constructor is private
+  // to prevent initiation with outer code.
+  private function __construct()
+  {
+    // The expensive process (e.g.,db connection) goes here.
+  }
+ 
+  // The object is created from within the class itself
+  // only if the class has no instance.
+  public static function getInstance()
+  {
+    if (self::$instance == null)
+    {
+      self::$instance = new Singleton();
+    }
+ 
+    return self::$instance;
+  }
+}
+```
+
+# The Command Pattern - Encapsulating Invocation
+
+Remote control analogy. Lots of classes with different interfaces.
+Command object sits in the middle and decouples.
+
+* The Command Pattern * encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoables operations.
+
+
+
+
+
+
+Pg - 206
 
 # Notes
 
