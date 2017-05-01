@@ -29,10 +29,12 @@ Example is zillion types of Starbucks all * with * different additions ** Espres
 
 Identify areas which may change.
 
-1 Take a DarkRoast object
-2 Decorate it with a Mocha object
-3 Decorate it with a Whip 
+1. Take a DarkRoast object
+2. Decorate it with a Mocha object
+3. Decorate it with a Whip 
 
+Decorators implement the same interface as the component they are going to decorate.
+Pg 95 the Decorator extends the Beverage class.
 
 <img src="/images/Decorator.png" alt="missing" class="inline"/>
 
@@ -40,6 +42,36 @@ https://sourcemaking.com/design_patterns/decorator/php
 
 https://sourcemaking.com/design_patterns
 
+
+This is how you use it:
+
+```
+  drink = new Darkroast();
+  drink = new Mocha(Drink);
+  drink = new Whip(Drink);
+  
+```
+
+# The Factory Pattern
+
+new - think when newing, is this better in a Factory?
+
+Identify the aspects that vary and separate them from what stays the same.
+** An object that just creates objects, other objects use this, when they need new objects = Factory. **
+
+```
+pizza = factory.createPizza(type);
+
+```
+## Simple Factory
+
+<img src="/images/Simple Factory.png" alt="missing" class="inline"/>
+
+Tie the store and the factory together.
+
+
+
+Pg - 139.
 
 
 
