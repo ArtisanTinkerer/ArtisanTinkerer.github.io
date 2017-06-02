@@ -116,15 +116,55 @@ Command object sits in the middle and decouples.
 
 * The Command Pattern * encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoables operations.
 
+** Read over this chapter again **
 
 
 
+# Adapter
+
+Travel plug analogy.
+
+Make an adapter so that a Turkey can be used like a Duck.
+
+```
+public class TurkeyAdapter implemements Duck{
+  Turkey turkey;
+
+  public TurkeyAdapter(Turkey turkey){
+    this.turkey = turkey;
+  }
+  
+  public void quack() {
+    turkey.gobble();
+  }
 
 
-Pg - 206
+  public void fly() {
+    turkey.hop();
+  }
+
+
+}
+
+```
+
+## Summary
+Basically just create an adapter class which sits between a client and adaptee and translates the requests.
+
+# Facade Pattern
+
+Analogy home theatre, lots of tasks to watch a film.
+Facade Pattern takes a complex system and makes it easier by implementing a Facade class that provides one, more reasonable interface.
+
+Facade will just have one method (watchMovie) which triggers all the sub tasks.
+
+pg 261
 
 # Notes
 
+** Look up, how to choose a design pattern.  **
+
+** Watch the Laracast again **
 
 ## OO Principles
 
