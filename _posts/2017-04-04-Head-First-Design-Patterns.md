@@ -151,14 +151,33 @@ public class TurkeyAdapter implemements Duck{
 ## Summary
 Basically just create an adapter class which sits between a client and adaptee and translates the requests.
 
-# Facade Pattern
+## Facade Pattern
 
 Analogy home theatre, lots of tasks to watch a film.
 Facade Pattern takes a complex system and makes it easier by implementing a Facade class that provides one, more reasonable interface.
 
 Facade will just have one method (watchMovie) which triggers all the sub tasks.
 
-pg 261
+
+* The Facade Pattern * provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
+
+** A Simplified Interface **
+
+## The Principle of Least Knowledge
+
+"talk only to your immediate friends"
+
+From a method in an object you can only invole methods which belong to:
+
+1, The object itself
+2, Objects passed in as a parameter to the method
+3, Any object the method creates or instantiates
+4, Any components of the object
+
+
+
+pg 266
+
 
 # Notes
 
