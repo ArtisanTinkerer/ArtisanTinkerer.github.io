@@ -206,6 +206,14 @@ App::bind('CarInterface', 'Subaru');
 ```
 
 
+
+
+# Updated #
+
+The most common way is constructor injection.
+
+Method injection works in the controller
+
 This next:
 
 https://laracasts.com/lessons/repositories-simplified
