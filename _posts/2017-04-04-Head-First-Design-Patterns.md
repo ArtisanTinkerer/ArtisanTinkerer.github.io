@@ -175,8 +175,30 @@ From a method in an object you can only invole methods which belong to:
 4, Any components of the object
 
 
+# Encapsulating Algorithmns - The Template Method Pattern
 
-pg 266
+Brewing tea and coffee example.
+
+CaffeineBeverage contains boilWater() and pourInCup().
+Tea and Coffee extend and code for brew and add condiments is in them.
+
+** The Template Method Pattern **
+Defines the skeleton of an alogrithm in a method, deferring some steps to subclasses.
+Subclasses can alos redifine certain steps.
+
+
+** The Hollywood Principle **
+
+Prevents dependency rot - high level components depending on low level components.
+
+With the Hollywood Principle we allow low-level components to hook themselves into a system.
+High-level components say "don't call us, we'll call you".
+
+In the tea/coffee example, the Caffeine Beverage class calls Tea and Coffee, not the other way around. 
+
+# Well-Managed Collections - The Interior and Composite Patterns #
+
+
 
 
 # Notes
