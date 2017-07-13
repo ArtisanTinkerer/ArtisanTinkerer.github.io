@@ -25,6 +25,8 @@ create database live_lookup;
 
 GRANT SELECT, INSERT, DELETE, CREATE,AlTER ON live_lookup.* username IDENTIFIED BY 'blahblaf'
 
+GRANT SELECT, INSERT, DELETE, CREATE,AlTER ON live_reporting.* to fdsafdsaf@'%' IDENTIFIED BY 'fdsaf'
+
 php artisan migrate
 
 # The Linux Stuff
