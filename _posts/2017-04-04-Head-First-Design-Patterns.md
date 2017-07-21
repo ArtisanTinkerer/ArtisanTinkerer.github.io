@@ -199,6 +199,18 @@ In the tea/coffee example, the Caffeine Beverage class calls Tea and Coffee, not
 # Well-Managed Collections - The Interior and Composite Patterns #
 
 
+## The Iterator Pattern
+
+
+* Relies on Iterator Interface
+* Just had functions like hasNext() and next()
+* Create classes which implement this, for each thing we need to iterate.
+
+
+
+
+
+
 
 
 # Notes
@@ -206,6 +218,10 @@ In the tea/coffee example, the Caffeine Beverage class calls Tea and Coffee, not
 ** Look up, how to choose a design pattern.  **
 
 ** Watch the Laracast again **
+
+## Single Responsibility (S in SOLLID)
+
+A class should have only one reason to change.
 
 ## OO Principles
 
