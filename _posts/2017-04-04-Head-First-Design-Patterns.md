@@ -209,6 +209,29 @@ In the tea/coffee example, the Caffeine Beverage class calls Tea and Coffee, not
 
 
 
+## The Composite Pattern
+
+
+# The State Pattern
+
+* Define a state interface.
+* Create a class for each state.
+
+State implements the behaviours that are appropriate for that state.
+
+The class that uses these has a ** current state ** and when it calls the methods, the correct code for the current state is executed.
+
+# The Proxy Pattern
+
+Proxies control and manage access. They stand in for the objects they are protecting.
+
+# Patterns in the Real World
+
+
+
+
+
+
 
 
 
