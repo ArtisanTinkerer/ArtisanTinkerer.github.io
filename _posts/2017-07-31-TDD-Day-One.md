@@ -104,8 +104,11 @@ $this->followRedirects;
 ### Clicking and Forms - pg 275
 
 
-
 I think that this will do for now, I will add more as I learn it.
+
+Tried working through [https://laracasts.com/series/lets-build-a-forum-with-laravel](https://laracasts.com/series/lets-build-a-forum-with-laravel) but this is for 5.4.
+
+
 
 
 
