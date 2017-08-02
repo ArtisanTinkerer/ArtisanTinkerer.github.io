@@ -168,12 +168,6 @@ if (Gate::denies('auth_codes', Image::class)) {
 
 
 
-
-
-
-
-
-
 # Laravel Version
 
 Need to be on 5.3 and the labelling app I am working on is only 5.2.39.
@@ -189,8 +183,6 @@ if (Gate::denies('maintain-images', Image::class)) {
       }
 
 ```
-
-
 
 
 
@@ -225,7 +217,20 @@ $gate->define('admin', function($user){
 
 ```
 
-Maybe just protect the maintenance routes.
+
+1, I need to drop in the Access Manager trait.
+2, And configure it to execute.
+3, Add the permissions middleware.
+
+
+
+To watch:
+
+Adam Wathan again
+Testing Helpers Laracasts
+
+
+
 
 
 
