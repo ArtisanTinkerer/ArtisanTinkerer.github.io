@@ -111,10 +111,21 @@ Tried working through [https://laracasts.com/series/lets-build-a-forum-with-lara
 
 
 
+# Adam Wathan
+
+[https://streamacon.com/video/laracon-us-2016/adam-wathan-test-driven-laravel](https://streamacon.com/video/laracon-us-2016/adam-wathan-test-driven-laravel)
+
+* Walking Skeleton
+* Features - acceptance testing
+* Unit - lower level
+* SQLlite in memory   
+* Model factories
 
 
+Unit tests - just test functions
 
 
+28:06
 
 
 
