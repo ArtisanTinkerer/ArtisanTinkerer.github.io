@@ -55,7 +55,7 @@ Connecting to the User database, to get perms.
 # Authorisation
 
 
-* Using primary verves: can, cannot, allows and denies.
+* Using primary verbs: can, cannot, allows and denies.
 
 * Peformed using the Gate facade.
 
@@ -214,6 +214,18 @@ $gate->define('staff', function($user,$image){
 
 
 ```
+
+## How Am I Using in the Reporting Utility
+
+Edit AuthServiceProvider.php
+```
+$gate->define('admin', function($user){
+            return $user->canDo('admin');
+        });
+
+```
+
+Maybe just protect the maintenance routes.
 
 
 
