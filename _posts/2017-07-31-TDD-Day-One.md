@@ -70,6 +70,18 @@ These look pretty simple:
 This will run all the database migrations.
 This is the way I want to go, maybe use an SQLLite DB in memory.
 
+## This is how to SQL lite in memory
+
+Add this to phpUnit.xml
+
+```
+
+<env name="DB_CONNECTION" value="sqlite"/>
+<env name="DB_DATABASE" value=":memory:"/>
+
+```
+
+
 ### Database Transactions ###
 
 Expects DB to be 'ready', it wraps all the tests in transactions and rolls the back
