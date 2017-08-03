@@ -124,8 +124,16 @@ Tried working through [https://laracasts.com/series/lets-build-a-forum-with-lara
 
 Unit tests - just test functions
 
+Instead of lumping together in a feature test, break down into Unit tests
+
+
+## What wouldj happen , if you wrote the tests after.
+
+Use Mock
 
 28:06
+
+47:04
 
 
 
