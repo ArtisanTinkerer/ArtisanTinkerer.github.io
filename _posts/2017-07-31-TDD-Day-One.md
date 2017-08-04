@@ -120,7 +120,37 @@ I think that this will do for now, I will add more as I learn it.
 
 Tried working through [https://laracasts.com/series/lets-build-a-forum-with-laravel](https://laracasts.com/series/lets-build-a-forum-with-laravel) but this is for 5.4.
 
+## Model Factories
 
+This is how you create models for your tests:
+```
+$factory->define(App\Models\Dashboard::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => $faker->firstName,
+        'public' => 1,
+
+    ];
+});
+
+```
+
+This is how you create related models:
+
+```
+$factory->define(App\Models\WidgetType::class, function (Faker\Generator $faker) {
+
+    return [
+
+        'type' => $faker->numberBetween(1,4),
+        'description' => $faker->numberBetween(1,4),
+        'chart_type_id' => function () {
+            return factory('App\Models\ChartType')->create()->id;
+        },
+
+    ];
+});
+```
 
 
 # Adam Wathan
