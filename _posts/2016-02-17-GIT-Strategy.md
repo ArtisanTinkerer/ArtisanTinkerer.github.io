@@ -6,7 +6,10 @@ date: 2016-02-17
 
 # Laracasts Tips
 
+
 ## Fixing Mistakes
+
+### If deployed
 
 * fix
 * add again
@@ -19,12 +22,15 @@ date: 2016-02-17
 1, git reset --hard hfjdshfjkds
  
  gets rid of the commit and the changes
+ reset everything to the way the code was
+ go back to the original commit
 
 2, git reset --soft hfjdshfjkds
+reset the commit but keeps local changes (uncommited)
 
-gets rid of commit and code changes
 
-**or**
+
+**or the correct way**
 
 * git add
 * git commit --amend
@@ -36,6 +42,88 @@ This will just fix the commit, with your changes.
 "If you can describe the change you have made, then your should commit it"
 
 "when you hit a milestone"
+
+git show will show the changes.
+
+
+## Workflow
+```
+git add .
+git commit
+
+```
+
+## Branching
+
+* Separate Timeline
+
+### Bugfix
+
+Already working on a new feature - all over the place
+New feature should be a new branch
+
+
+git checkout a file will discard changes
+One branch per bugfix
+An easy fix could just be done on master
+
+**Finished feature**
+- checkout master
+- merge feature
+
+This created a commit
+
+### Conflicts
+
+```git branch -v```
+
+
+If git merge reports conflicts.
+Git status reports both modified
+When the file is viewed:
+
+<<<<< HEAD -- current branch
+
+
+This is Laravel
+
+======
+
+Welcome to Laravel
+
+>>>>>>> feature-branchg
+
+
+Fix this manually, then .add the file.
+
+Then ```git commit``` the resolved file.
+
+### Git Aliases
+git config --global alias.s status
+
+Adds to the bottom of the .gitconfig file
+**or**
+the .bashrc
+
+
+
+## Stash Away Changes
+
+Not ready for a commit before swapping branch.
+- could do a WIP commit, then a git reset soft
+soft does not touch local modified files, hard will trash them all.
+
+
+```git stash`` saves working directory
+``` git stash list```
+```git stash pop``` takes them off the list
+```git stash apply```
+you can have multiple stashes
+
+
+## Pusing to GitHub
+
+## Rebasing
 
 
 
