@@ -123,7 +123,20 @@ you can have multiple stashes
 
 ## Pusing to GitHub
 
+git push -u
+
 ## Rebasing
+```git merge
+git rebase <branch>```
+
+git log --oneline --graph
+
+git rebase master
+
+
+## Interactive Rebasing
+
+
 
 
 
