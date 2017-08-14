@@ -89,6 +89,37 @@ This will begin and rollback!
 
 ## Testing Collabarators
 
+```
+$this->setExpectedException('Exception')
+
+
+```
+
+Maybe I can use ```instanteof()``` in my factories.
+
+
+## Homework Solutions
+
+
+## Regression Testing
+
+## Liking a Model with TDD
+
+## Test Method Refactoring
+
+## Design A Fluent API with TDD
+
+## Testing Email With Custom Assertions
+
+## PHPUnit Prophecies
+
+## Bug Fixing Workflow
+
+
+
+
+
+
 
 
 
