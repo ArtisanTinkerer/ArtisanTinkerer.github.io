@@ -103,6 +103,14 @@ Maybe I can use ```instanteof()``` in my factories.
 
 ## Regression Testing
 
+Adding new tests after bugs found in testing.
+1, Write test for bug.
+2, Fix bug.
+3, Test will pass.
+
+
+
+
 ## Liking a Model with TDD
 
 ## Test Method Refactoring
