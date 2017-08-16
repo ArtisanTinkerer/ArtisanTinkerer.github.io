@@ -113,7 +113,25 @@ Adding new tests after bugs found in testing.
 
 ## Liking a Model with TDD
 
+Integration folder
+
+seeInDatabase
+
+morphMany
+
+
 ## Test Method Refactoring
+
+Add helper functions to TestCase.php.
+Then can use them in any test.
+
+Setup method.
+
+helpers - functions.php
+
+Functions that are used over and over again. 
+Load these with autoload-dev
+
 
 ## Design A Fluent API with TDD
 
