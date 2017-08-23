@@ -152,6 +152,12 @@ $factory->define(App\Models\WidgetType::class, function (Faker\Generator $faker)
 });
 ```
 
+Make your models like this:
+
+```
+$dashboard = factory(Dashboard::class)->create();
+```
+
 
 # Adam Wathan
 
