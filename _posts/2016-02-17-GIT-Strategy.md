@@ -143,8 +143,9 @@ git rebase master
 
 
 
+# Git Strategy
 
-## Git Strategy
+
 http://nvie.com/posts/a-successful-git-branching-model/
 
 3 Branches
@@ -154,6 +155,35 @@ Master
 Testing - checked out to test env
 
 Develop - working
+
+
+## Feature brnaches come from develop.
+
+```
+
+git checkout -b myfeature develop
+
+```
+## Release branches
+
+
+
+
+## Finished features merged back in.
+```
+git checkout develop
+git merge --no--ff myfeature (merges with a new commit object)
+git branch -d myfeature
+git push origin develop
+
+```
+
+
+
+
+
+
+
 
 
 # Pushing changes to master
