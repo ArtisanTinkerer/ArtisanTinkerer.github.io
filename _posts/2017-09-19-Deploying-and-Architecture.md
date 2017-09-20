@@ -59,6 +59,16 @@ Upload temmplate.
 Coordinates deployment and updates across a fleet.
 
 
+## Dev Ops
+[http://docs.aws.amazon.com/devops/latest/gsg/setup-access.html](http://docs.aws.amazon.com/devops/latest/gsg/setup-access.html)
+
+Looking a this one:
+
+http://docs.aws.amazon.com/autoscaling/latest/userguide/as-register-lbs-with-asg.html
+
+
+
+
 ## Links
 
 [https://deliciousbrains.com/scaling-laravel-aws-elastic-beanstalk-part-1-setting-up-laravel/](https://deliciousbrains.com/scaling-laravel-aws-elastic-beanstalk-part-1-setting-up-laravel/)
