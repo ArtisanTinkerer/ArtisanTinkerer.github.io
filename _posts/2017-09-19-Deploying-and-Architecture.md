@@ -80,6 +80,10 @@ Code Deploy
 
 Cloud Formation
 
+## Application Templates
+
+http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/sample-templates-appframeworks-us-west-2.html
+
 
 
 
