@@ -84,6 +84,19 @@ Cloud Formation
 
 http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/sample-templates-appframeworks-us-west-2.html
 
+## Maybe just do this
+Tutorial: Set Up a Scaled and Load-Balanced Application
+
+http://docs.aws.amazon.com/autoscaling/latest/userguide/as-register-lbs-with-asg.html
+
+Create AMI
+
+
+
+
+
+
+
 
 
 
