@@ -59,15 +59,15 @@ Upload temmplate.
 Coordinates deployment and updates across a fleet.
 
 
+
+
+
 ## Dev Ops
 [http://docs.aws.amazon.com/devops/latest/gsg/setup-access.html](http://docs.aws.amazon.com/devops/latest/gsg/setup-access.html)
 
 Looking a this one:
 
 http://docs.aws.amazon.com/autoscaling/latest/userguide/as-register-lbs-with-asg.html
-
-
-
 
 ## Links
 
@@ -77,6 +77,8 @@ http://docs.aws.amazon.com/autoscaling/latest/userguide/as-register-lbs-with-asg
 ## Where do we start?
 
 Code Deploy
+
+https://www.youtube.com/watch?v=qZa5JXmsWZs
 
 Cloud Formation
 
@@ -89,7 +91,54 @@ Tutorial: Set Up a Scaled and Load-Balanced Application
 
 http://docs.aws.amazon.com/autoscaling/latest/userguide/as-register-lbs-with-asg.html
 
-Create AMI
+http://docs.aws.amazon.com/autoscaling/latest/userguide/GettingStartedTutorial.html
+
+# The Plan
+
+Don't touch the current box.
+
+1, Create a new box.
+2, Use this to make an AMI.
+3, Use this to setup a load balanced auto-scaling group.
+
+
+# Box build
+
+
+## To Do
+Sessions
+Logs - central AWS thing?
+Code Deploy
+
+
+
+
+
+# Architect Cert?
+
+## AWS Technical Essentials 
+
+https://acloud.guru/learn/aws-technical-essentials
+
+
+## AWS Certified Solutions Architect - Associate
+
+https://acloud.guru/learn/aws-certified-solutions-architect-associate
+
+http://cantrill.io/certification/aws/2016/03/27/how-to-pass-AWS-certifications.html
+Udemy - Ryan
+
+Ryan Kroonenburg
+
+
+Google Play app
+Sorry forgot to tell you guys what it was:
+https://play.google.com/store/apps/details?id=com.ionicframework.awsquiz543924
+
+
+
+
+
 
 
 
