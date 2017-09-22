@@ -1,5 +1,3 @@
-2017-09-22-Adventures Is AWS.md
-
 ---
 layout: default
 title: "AWS"
@@ -94,12 +92,101 @@ Out of the box cloud - Wordpress.
 No need for AWS skills.
 
 
+###  10,000 Foot Overview Foot 2 ###
+
+#### Storage 
+
+* S3 - Simple Storage Service *
+Objects
+Lots in the exams.
+Virtual disk in the cloud for storing files.
+Not somewhere to install code or db.
+Dropbox was one of the first to use s3
+
+* Glacier *
+Place to archive files.
+Regulatory bodies may require that files are kept. Low cost, not immediate access.
+
+* EFS Elastic File Service *
+Files can be shared - could install apps and databases
+
+* Storage Gateway * 
+A way of connecting S3 to on premise data centre, usually an onsite VM.
+
+#### Datatabse
+
+* RDS - Relational Database Sevices *
+All types of db and Aurora.
+
+* Dynamo DB *
+Non relational databases. No SQL. Really scaleable.
+Lots in developer exam.
+
+* Redshift *
+Data warehousing - big data.
+Copy data here, then run big queries.
+
+* Elasticcache *
+For caching data in the cloud.
+Eg vacuum cleaner is best seller, so cache this data.
+
+#### Migration Services
+
+* Snowball *
+Started as import/export using disks. 
+This is how to do this at the Enterprise level - a briefcase sized appliance which you load and send to Amazon.
+
+Snowball Edge also has compute capacity, can be taken on premis.
+
+* DMS - Database Migration Services*
+
+Can move from different database types eg Oracle to Aurora feud.
+
+* Server Migration Services *
+
+For migrating VMs from on premise to AWS.
+
+#### Analytics 
+
+* Athena *
+
+Allows you to execute SQL queries against S3 files. Like turning flat files into a db.
+
+* EMR - Elastic Map Reduce *
+Used to process large amounts of data. Hadoop, Apache Spark. 
+
+* Cloud Search - Elastic Search *
+Used to create search capabilities for websites
+
+* Kinesis *
+Streaming and analysing real-time data.
+Financial transactions, social media streams. 
+
+* Data Pipeline *
+eg. Move data from s3 into dynamodb 
+
+* Quick Sight *
+Business Analytics Tool
 
 
 
 
 
-* Identity Access
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
