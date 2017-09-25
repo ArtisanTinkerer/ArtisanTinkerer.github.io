@@ -59,6 +59,23 @@ Upload temmplate.
 Coordinates deployment and updates across a fleet.
 
 
+Dev machine has AppSpec file (application specific).
+Deploys to a Deployment Group.
+* You can Auto Deploy to Auto Scaling Group *
+
+### Blue/green deployment
+
+Just creating a parallel environment before switching.
+
+
+
+
+
+http://www.cardinalpath.com/autoscaling-your-website-with-amazon-web-services-part-1/
+
+
+
+
 
 
 
