@@ -8,6 +8,10 @@ date: 2017-09-22
 
 I am considering taking some AWS certification. This is documenting that journey.
 
+
+
+
+
 # A Cloud Guru
 
 ## AWS Tech Essentials
@@ -36,7 +40,7 @@ Originally called SQS - 2004.
 * Should subscribe to A Cloud Guru on youTube *
 * Jeff Barrs Blogg *
 
-###  10,000 Foot Overview Foot 1 ###
+###  10,000 Foot Overview 1 ###
 
 What do you need for the * Certified Solutions Architect Associate Exam *.
 
@@ -92,7 +96,7 @@ Out of the box cloud - Wordpress.
 No need for AWS skills.
 
 
-###  10,000 Foot Overview Foot 2 ###
+###  10,000 Foot Overview 2 ###
 
 #### Storage 
 
@@ -169,6 +173,11 @@ eg. Move data from s3 into dynamodb
 Business Analytics Tool
 
 
+###  10,000 Foot Overview 3 ###
+
+
+
+###  10,000 Foot Overview 4 ###
 
 
 
@@ -177,10 +186,29 @@ Business Analytics Tool
 
 
 
+* Look At *
+
+CloudWatch LOgs
 
 
+# Links
 
+https://www.airpair.com/aws/posts/building-a-scalable-web-app-on-amazon-web-services-p1
 
+https://wblinks.com/notes/aws-tips-i-wish-id-known-before-i-started/
+
+https://www.youtube.com/watch?v=ccojvcQq858
+
+Use Redis for cache?
+
+Code on AMI or pulled?
+How do we get he code on the box
+
+Read Code Deploy
+
+Centralised logging
+
+Don't SSH
 
 
 
