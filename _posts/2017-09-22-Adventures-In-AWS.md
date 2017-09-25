@@ -199,6 +199,11 @@ https://wblinks.com/notes/aws-tips-i-wish-id-known-before-i-started/
 
 https://www.youtube.com/watch?v=ccojvcQq858
 
+
+# Thoughts
+
+How to Deploy
+
 Use Redis for cache?
 
 Code on AMI or pulled?
