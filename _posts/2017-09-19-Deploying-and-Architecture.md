@@ -80,22 +80,30 @@ https://www.youtube.com/watch?v=aX54mhZbN58
 
 
 
-
-
-
-
-
-
-
-
-
-
 ## Dev Ops
 [http://docs.aws.amazon.com/devops/latest/gsg/setup-access.html](http://docs.aws.amazon.com/devops/latest/gsg/setup-access.html)
 
 Looking a this one:
 
 http://docs.aws.amazon.com/autoscaling/latest/userguide/as-register-lbs-with-asg.html
+
+
+
+# Tutorial Linux
+
+## Video 1
+
+Create EC2 instance
+
+## Video 2 
+
+Stop instance.
+Auto scaling group.
+
+Deploying code to an auto scaling group.
+Launch Configuration - bash script here could do a git pull?
+
+
 
 ## Links
 
@@ -168,12 +176,32 @@ http://www.cardinalpath.com/autoscaling-your-website-with-amazon-web-services-pa
 
 
 
+Immutable - Mutable
+
+
+https://www.quora.com/Whats-the-best-way-to-push-code-to-production-on-multiple-EC2-instances
+
+set -e in Bash Scripts
+
+https://3e8.io/2016/lessons-learned-using-aws-codedeploy-with-auto-scaling-groups/
+
+
+# How to handle database migrations 
+
+The biggest 
+
+
+# What can I do on Free Tier?
+https://www.infoworld.com/article/2613845/cloud-computing/free-amazon-web-services----and-how-to-make-the-most-of-them.html
 
 
 
 
 
 
+# Big questions
+How to pull the code
+How to run database migrations - nothing to migrate?
 
 
 
