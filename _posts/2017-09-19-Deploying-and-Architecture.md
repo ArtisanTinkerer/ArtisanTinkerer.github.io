@@ -67,11 +67,22 @@ Deploys to a Deployment Group.
 
 Just creating a parallel environment before switching.
 
+## CodeDeploy with Auto Scaling
+
+http://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-aws-auto-scaling.html
+
+"When new Amazon EC2 instances are launched as part of an Auto Scaling group, AWS CodeDeploy can deploy your revisions to the new instances automatically"
+
+https://aws.amazon.com/blogs/devops/under-the-hood-aws-codedeploy-and-auto-scaling-integration/
+
+### Deep Dive 
+https://www.youtube.com/watch?v=aX54mhZbN58
 
 
 
 
-http://www.cardinalpath.com/autoscaling-your-website-with-amazon-web-services-part-1/
+
+
 
 
 
@@ -151,6 +162,8 @@ Ryan Kroonenburg
 Google Play app
 Sorry forgot to tell you guys what it was:
 https://play.google.com/store/apps/details?id=com.ionicframework.awsquiz543924
+
+http://www.cardinalpath.com/autoscaling-your-website-with-amazon-web-services-part-1/
 
 
 
