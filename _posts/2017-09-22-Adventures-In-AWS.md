@@ -175,12 +175,136 @@ Business Analytics Tool
 
 ###  10,000 Foot Overview 3 ###
 
+#### Security and Identity 
 
+Every single exam - fundamental component.
+
+* Inspector *
+Inspects VMs and reports.
+
+* Certificate Manager *
+SSL certificates
+
+* Directory Service *
+Connect AD to AWS.
+
+* WAF *
+Web Application Firewalls
+CSRF
+SQL Injection.
+
+* Artifacts *
+Compliance Documentation
+
+#### Management Tools 
+
+* CloudWatch *
+
+* Cloud Formation *
+Probably going to use.
+Turn infrastructure into code.
+A document which describes your environment.
+
+* Cloud Trail *
+Auditing.
+
+* Opsworks *
+
+* Config *
+
+* Service Catalog *
+
+* Trusted Advisor *
+Tips on cost/performance.
+
+#### Application Services
+
+* Step Function *
+Way to visualise what is going on.
+
+* SWF - Simple Workflow *
+
+* API Gateway *
+
+A door for securing
+
+* AppStream *
+
+A way of streaming desktop applications to users.
+
+* Elastic Transcoder *
+
+Formats videos for all devices.
+
+
+#### Developer Tools
+
+* CodeCommit *
+
+* CodeBuild *
+
+For compiling code 
+
+* CodeDeploy * 
+
+* CodePipeline *
+
+Not in the Developer exams yet!
+
+#### Mobile Services
+
+* Mobile Hub *
+
+* Cognito * 
+
+* Device Farm * 
+ Testing applications.
+ 
+ * Mobile Analytics *
+ 
+ * Pinpoint *
+ 
+ #### Business Productivity
+ 
+ Mail and docs. 
+
+### iOT
+
+#### Desktop and App Streaming
+
+* Workspaces *
+OS in the cloud.
+
+AppStream 2.0 
+
+#### AI
 
 ###  10,000 Foot Overview 4 ###
 
+* Alexa *
 
+* Polly *
+Text to voice
 
+* Machine Learning *
+
+Predict data based 
+
+* Rekognition * 
+
+Analyse images.
+
+#### Messaging
+
+* SNS *
+
+* SQS *
+
+Decoupling queue system.
+
+* SES *
+
+Email
 
 
 
