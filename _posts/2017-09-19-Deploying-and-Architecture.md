@@ -177,7 +177,7 @@ http://www.cardinalpath.com/autoscaling-your-website-with-amazon-web-services-pa
 
 
 Immutable - Mutable
-
+https://aws.amazon.com/answers/configuration-management/aws-ami-design/
 
 https://www.quora.com/Whats-the-best-way-to-push-code-to-production-on-multiple-EC2-instances
 
