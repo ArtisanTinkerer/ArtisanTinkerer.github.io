@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Vue Knowledge Upgrade"
-date: 2017-09-03
+date: 2017-10-03
 ---
 
 I'm trying to get a good sytem for editing complex REST forms. I think the answer is probably to use Vue more. 
@@ -66,7 +66,23 @@ Still not sure how I could use this.
 # Webpack
 Moving code out from app.js.
 
-# Laravel Mix
+# Episode 23 Laravel Mix
+
+Only in Laravel 5.4.
+
+# Episode 24 Shared State 101
+
+# Episode 25 Custom Input
+
+Good for components which will be reused in a project.
+
+# Episode 26 Vue SPA Essentials: Routing
+
+Single Page Applications. 
+
+# Episode 29 Dedicated Form Components
+
+
 
 
 
@@ -76,6 +92,11 @@ Moving code out from app.js.
 # Thoughts
 Should I use more components in my edit form.
 My ch-widget-editor is single use, maybe this should be done inline?
+
+Google for Vue/Laravel resuable forms.
+Hot module replacement in Laravel?
+
+
 
 
 
