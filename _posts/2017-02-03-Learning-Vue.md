@@ -256,6 +256,27 @@ created: function () {
 
 So, I can use this, when I pass the dashboard id from the sidebar.vue to the dashboard.vue
 
+# Passing Props to a Child Component
+HTML attributes are case-insensitive, so when using non-string templates, camelCased prop names need to use their kebab-case (hyphen-delimited) equivalents:
+
+
+Should be like this:
+
+```
+v-bind:my-prop="myProp"
+```
+
+So, the prop can be in camel case but when data is being passed, they mus be in kebab case.
+```
+props: ['myProp'],
+```
+
+How do I pass and Eloquent collection as a prop?
+```
+:widget-types="{{$widgetTypes}}"
+```
+
+
 
 
 
