@@ -68,7 +68,7 @@ Easier to replace cache implementation.
 
 ## CSRF Protection
 Cross Site Request Forgery.
-*Token ins needed in forms
+**Token is needed in forms**
 
 **By default, the  resources/assets/js/bootstrap.js file registers the value of the csrf-token meta tag with the Axios HTTP library. **
 
@@ -107,20 +107,79 @@ Gates are Closures that determine if a user is authorized to perform a given act
 
 Laravel's events provide a simple Observer implementation.
 
+Event classes are in ```app/Events```.
+
+Listeners classes are in ```app/Listeners```.
+
+Events serve as a great way to decouple various parts of your application -
+single event can have several listeners which do not depend on each other.
+
+Events and Listeners are registered in ```EventServiceProvider```.
+
+```
+protected $listen = [
+        'App\Events\TestEvent' => [
+            'App\Listeners\TestListener',
+        ],
+    ];
+```
+Then just run ```php artisan event:generate```.
+
+An event class is simply a data container which holds the information related to the event. 
+
+Example - Order Shipped
+
+```
+    public function __construct(Order $order)
+    {
+        $this->order = $order;
+    }
+
+```
+
+Event Listeners receive the event instance in their handle method.
+
 ### Broadcasting
 
 Websockets are typically used to send a message from the server and update the client.
 This saves polling the application for changes.
 
 
+config is in broadcasting.php
+
+## Cache
+
+Laravel supports Memcached and Redis
+
+Can just cache values (not sure why) or collections.
 
 
 
+## Notifications
 
 
+## Queues
+
+Queues allow you to defer the processing of a time consuming task.
+Configuration is in queue.php.
 
 
+Having several queues can be useful. High priority one can be processed first.
 
+### Creating Jobs
+Jobs are stored in the ```app/Jobs``` directory.
+To make a job : ```php artisan make:job ProcessPodcast```
+
+Changed queue driver to database.
+Jobs are going into the jobs table.
+
+### Running the Queue Worker.
+
+```php artisan queue:work```
+
+### Dealing With Failed Jobs
+
+Failed queue table
 
 # Refresh
 
@@ -133,7 +192,14 @@ This saves polling the application for changes.
 
 Contracts
 Service Container 
+When to use queues and when to use observers.
+
+
 
 # Don't forget
 
 Guards!
+
+## Difference between Contract and Facade 
+
+
