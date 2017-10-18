@@ -301,6 +301,70 @@ Schema::disableForeignKeyConstraints();
 
 ## Eloquent
 
+Make model with migration:
+
+```
+php artisan make:model User -m
+```
+If you don't want timestamps:
+
+```
+public $timestamps = false;
+
+```
+
+###  Retrieving Results 
+
+Getting all: ```$flights = App\Flight::all();```
+
+Each Eloquent model serves as a query builder.
+
+Adding additional constraints:
+
+```
+$flights = App\Flight::where('active', 1)
+               ->orderBy('name', 'desc')
+               ->take(10)
+               ->get()
+               ```
+
+
+```all``` and ```get``` return a collection.
+
+** Can use cursors **
+
+#### Single Results
+
+```
+$flight = App\Flight::find(1);
+```
+
+```
+$flight = App\Flight::where('active', 1)->first();
+```
+#### Aggregates
+
+```$count = App\Flight::where('active', 1)->count();```
+
+### Inserting and Updating Models
+
+Mass Updates:
+
+```
+App\Flight::where('active', 1)
+          ->where('destination', 'San Diego')
+          ->update(['delayed' => 1]);
+          ```
+Once line create:
+
+```$flight = App\Flight::create(['name' => 'Flight 10']);```
+
+
+FirstOrCreate / FirstOrNew
+
+New does not persist to the database.
+
+          
 
 # Refresh
 
