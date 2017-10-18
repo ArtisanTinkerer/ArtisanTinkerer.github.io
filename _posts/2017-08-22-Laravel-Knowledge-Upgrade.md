@@ -68,9 +68,10 @@ Easier to replace cache implementation.
 
 ## CSRF Protection
 Cross Site Request Forgery.
+
 **Token is needed in forms**
 
-**By default, the  resources/assets/js/bootstrap.js file registers the value of the csrf-token meta tag with the Axios HTTP library. **
+**By default, the  resources/assets/js/bootstrap.js file registers the value of the csrf-token meta tag with the Axios HTTP library.**
 
 ## Security
 
@@ -214,13 +215,13 @@ If you just want a single field you can use:
 
 also ```->pluck```
 
-** Results can be chunked **
+**Results can be chunked**
 
-** Aggregates can also be done ** 
+**Aggregates can also be done** 
 
 Selects can be done.
 
-** Raw selected can be done but be wary of SQL injection**
+**Raw selected can be done but be wary of SQL injection**
 
 ### Joins
 
