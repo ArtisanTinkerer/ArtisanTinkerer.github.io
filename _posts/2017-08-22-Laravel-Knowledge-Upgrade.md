@@ -361,11 +361,225 @@ Once line create:
 ```$flight = App\Flight::create(['name' => 'Flight 10']);```
 
 
-FirstOrCreate / FirstOrNew
+**FirstOrCreate / FirstOrNew**
 
 New does not persist to the database.
 
-          
+**UpdateOrCreate**
+
+### Deleting Models
+
+If you know the primary key, you can just destroy:
+
+```App\Flight::destroy(1);```
+
+You can also delete by a query:
+
+```$deletedRows = App\Flight::where('active', 0)->delete();```
+
+### Query Scopes
+
+
+
+#### Global Scopes
+Global scopes allow you to add constraints to all queries for a given model. (A bit like soft deletes);
+
+
+Write a scope that implements the Scope interface. It has one method ```apply```.
+
+```
+   public function apply(Builder $builder, Model $model)
+    {
+        $builder->where('age', '>', 200);
+    }
+    
+```
+Then these can be added to models:
+
+```
+   protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope(new AgeScope);
+    }
+
+```
+
+**Removing Global Scopes**
+
+```
+User::withoutGlobalScope(AgeScope::class)->get();
+```
+
+
+
+
+#### Local Scopes
+Common set of constraints which mat easily be reused throughout the application.
+Just added to models:
+
+```
+public function scopePopular($query)
+    {
+        return $query->where('votes', '>', 100);
+    }
+
+```
+Then use them like this:
+```$users = App\User::popular()->active()->orderBy('created_at')->get();```
+
+
+#### Dynamic Scopes
+A scope which accepts parameters. LIke this:
+
+```
+ public function scopeOfType($query, $type)
+    {
+        return $query->where('type', $type);
+    }
+    
+```
+And used like this:
+
+```$users = App\User::ofType('admin')->get();```
+
+###  Events
+
+Eloquent models fire lots of events. These can then be used to execute code.
+
+To get started, define a ```$dispatchesEvents``` property on your Eloquent model that maps various points of the Eloquent model's lifecycle to your own event classes.
+
+### Observers
+
+If you are listening to many events on a mode, you may use observers to group the listeners.
+
+### Relationships
+
+Refer to my Eloquent Cheatsheet for these.
+
+
+#### Querying Relationship Existence
+
+Only gets posts with comments.
+
+```$posts = App\Post::has('comments')->get();```
+
+Get posts without and comments.
+```$posts = App\Post::doesntHave('comments')->get();```
+
+You can count the number of related models:
+```$posts = App\Post::withCount('comments')->get();```
+
+#### Inserting and Updating Related Models
+
+```
+$comment = new App\Comment(['message' => 'A new comment.']);
+
+$post = App\Post::find(1);
+
+$post->comments()->save($comment);
+```
+
+**Belongs To Relationships**
+
+You can use the associate method:
+```
+$user->account()->associate($account);
+```
+or ```dissociate```.
+
+**Many to Many**
+
+Use the attach for many to many relationships:
+```$user->roles()->attach($roleId);```
+
+or ```detach```.
+
+**Synching Associations**
+
+The sync method can also be used to construct many-to-many associations.
+``$user->roles()->sync([1, 2, 3]);``
+
+### Collections
+
+All multi result sets are Eloquent Collectons which extend the base Laravel Collection.
+
+### Mutators
+Accessors and mutators allow you to format Eloquent attribute values when you retrieve or set.
+
+#### Assessors
+```
+public function getFirstNameAttribute($value)
+ {
+        return ucfirst($value);
+ }
+```
+retrieve like this ```$firstName = $user->first_name;```
+
+#### Mutators
+
+Just like this:
+```
+  public function setFirstNameAttribute($value)
+    {
+        $this->attributes['first_name'] = strtolower($value);
+    }
+    ```
+
+#### Attribute Casting
+
+### API Resources
+
+When building an API you need to transform Eloquent Models to JSON.
+Laravel resource classes do this.
+
+To generater a resource class:
+```
+php artisan make:resource User
+```
+You can also make resources which transflom collections of models.
+
+A resource class represents a single model that needs to be transformed to a JSON structure.
+There is just a toArray method:
+```
+ public function toArray($request)
+    {
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'email' => $this->email,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
+        ];
+    }
+
+```
+
+### Serialization
+
+Array:
+```return $user->toArray();```
+
+Converting models to JSON:
+```
+return $user->toJson();
+```
+
+Hiding Attributes From JSON:
+```
+protected $hidden = ['password'];
+```
+or whitelist with ```$visible```.
+
+You can also ```$append``` attributes.
+
+
+
+## Testing
+
+Unit testing: Most unit tests probably focus on a single method
+
 
 # Refresh
 
