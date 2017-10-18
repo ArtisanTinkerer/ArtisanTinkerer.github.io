@@ -181,7 +181,130 @@ Jobs are going into the jobs table.
 
 Failed queue table
 
+
+## Task Scheduler
+
+* Only need a single Cron entry.
+* Schedule is in ```Kernel.php```
+
+# Database
+
+Three ways to access database: DB Facade, Query Builder or Eloquent.
+
+## DB Facade.
+
+* Use parameter bindings ```$users = DB::select('select * from users where active = ?', [1]);```
+ or named bindings ```$results = DB::select('select * from users where id = :id', ['id' => 1]);```
+ 
+* Transactions can retry when experiencing deadlocks. 
+
+## Query Builder
+
+Uses PDO binding, so don't need to protect against SQL injection.
+Fluent:
+``` $users = DB::table('users')->get();```
+
+The get method returns a collection of StdClass.
+
+If you just want a single row, you can use ->first:
+```$user = DB::table('users')->where('name', 'John')->first();```
+
+If you just want a single field you can use:
+```->value('email');```
+
+also ```->pluck```
+
+** Results can be chunked **
+
+** Aggregates can also be done ** 
+
+Selects can be done.
+
+** Raw selected can be done but be wary of SQL injection**
+
+### Joins
+
+Inner join = ```->join('contacts', 'users.id', '=', 'contacts.user_id') ```
+Left Join = ```->leftJoin('posts', 'users.id', '=', 'posts.user_id') ```
+
+Cross Joins and Unions are also possible.
+
+### Where
+
+```$users = DB::table('users')->where('votes', '=', 100)->get();```
+
+An array of conditions:
+```
+$users = DB::table('users')->where([
+    ['status', '=', '1'],
+    ['subscribed', '<>', '1'],
+])->get();
+```
+ There are also some additional where clauses like ``` where Between```.
+
+# Pessimistic Locking
+A shared lock prevents the selected rows from being modified until your transaction commits:
+
+``` DB::table('users')->where('votes', '>', 100)->sharedLock()->get(); ```
+
+
+## Migrations
+
+Creating new:
+``` php artisan make:migration create_users_table --create=users ```
+
+The command I always forget:
+
+```php artisan migrate:refresh --seed```
+
+### Column Types
+
+```$table->bigInteger('votes');
+$table->double('column', 15, 8);
+$table->boolean('confirmed');
+$table->date('created_at');
+$table->dateTime('created_at');
+$table->softDeletes();```
+```$table->string('name', 10); ``` VarChar with length
+
+```->nullable()```
+
+### Indexes
+
+When creating:
+```$table->string('email')->unique()```
+
+After created:
+```$table->unique('email');```
+
+Compound index:
+```$table->index(['account_id', 'created_at']);```
+
+
+
+### Foreign Key Constraints
+
+```
+ $table->foreign('user_id')->references('id')->on('users');
+```
+
+Constraints can be enabled and disabled:
+```
+Schema::enableForeignKeyConstraints();
+
+Schema::disableForeignKeyConstraints();
+
+```
+
+## Redis
+
+
+## Eloquent
+
+
 # Refresh
+
+
 
 ## Service Providers
 
@@ -201,5 +324,10 @@ When to use queues and when to use observers.
 Guards!
 
 ## Difference between Contract and Facade 
+
+
+# Links
+[https://scaleyourcode.com/blog/article/10](https://scaleyourcode.com/blog/article/10)
+
 
 
