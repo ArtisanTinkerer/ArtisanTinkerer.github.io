@@ -7,16 +7,16 @@ date: 2017-10-17
 I haven't read the Laravel documentation for a while So I figured I should skim through the latest version (5.5) and see if any gaps in my knowledge need filling.
 
 
-## Configuring Caching
+# Configuring Caching
 
 Should cache the config when deploying:
 ```php artisan config:cache ```
 
-## Deployment
+# Deployment
 
 Don't forget all the optimizations.
 
-## Facades
+# Facades
 
 A static interface to classes that are available in the application's service container.
 
@@ -24,7 +24,7 @@ A static interface to classes that are available in the application's service co
 - expressive syntax - more testability
 - don't need classes 
 
-## Contracts
+# Contracts
 
 Set of interfaces which define the core services provided by the framework.
 
@@ -33,7 +33,7 @@ Contracts allow you to define explicit dependencies for your classes.
 Contracts are easier to use test when used on packages.
 
 
-### Repository Example
+## Repository Example
 
 $cache is passed into the constructor:
 ```
@@ -55,7 +55,7 @@ use Illuminate\Contracts\Cache\Repository as Cache;
 The contracts package contains no implementation and no dependencies.
 Easier to replace cache implementation.
 
-#### How To Use Contracts
+## How To Use Contracts
 
 * Many types of classes in Laravel are resolved through the service container.
 * To get an implementation of a contract. type-hint the interface in the constructor/
@@ -73,9 +73,9 @@ Cross Site Request Forgery.
 
 **By default, the  resources/assets/js/bootstrap.js file registers the value of the csrf-token meta tag with the Axios HTTP library.**
 
-## Security
+# Security
 
-### Authentication 
+## Authentication 
 
 Guards define how users are authenticated for each request.
 
@@ -87,7 +87,7 @@ Call middleware from constructor:
 ```
 
 
-### API Authentication (Passport)
+## API Authentication (Passport)
 
 APIs typically use tokens to authenticate users and do not maintain session state.
 
@@ -98,13 +98,11 @@ Developers building applications that need to interact with your API need to reg
 - name and URL to redirect to after approval
 
 
-### Authorisation
+## Authorisation
 
 Gates are Closures that determine if a user is authorized to perform a given action and are defined in AuthServiceProvider
 
-## Digging Deeper
-
-### Events
+# Events
 
 Laravel's events provide a simple Observer implementation.
 
@@ -140,7 +138,7 @@ Example - Order Shipped
 
 Event Listeners receive the event instance in their handle method.
 
-### Broadcasting
+## Broadcasting
 
 Websockets are typically used to send a message from the server and update the client.
 This saves polling the application for changes.
@@ -156,10 +154,7 @@ Can just cache values (not sure why) or collections.
 
 
 
-## Notifications
-
-
-## Queues
+# Queues
 
 Queues allow you to defer the processing of a time consuming task.
 Configuration is in queue.php.
@@ -167,23 +162,23 @@ Configuration is in queue.php.
 
 Having several queues can be useful. High priority one can be processed first.
 
-### Creating Jobs
+## Creating Jobs
 Jobs are stored in the ```app/Jobs``` directory.
 To make a job : ```php artisan make:job ProcessPodcast```
 
 Changed queue driver to database.
 Jobs are going into the jobs table.
 
-### Running the Queue Worker.
+## Running the Queue Worker.
 
 ```php artisan queue:work```
 
-### Dealing With Failed Jobs
+## Dealing With Failed Jobs
 
 Failed queue table
 
 
-## Task Scheduler
+# Task Scheduler
 
 * Only need a single Cron entry.
 * Schedule is in ```Kernel.php```
@@ -223,14 +218,14 @@ Selects can be done.
 
 **Raw selected can be done but be wary of SQL injection**
 
-### Joins
+## Joins
 
 Inner join = ```->join('contacts', 'users.id', '=', 'contacts.user_id') ```
 Left Join = ```->leftJoin('posts', 'users.id', '=', 'posts.user_id') ```
 
 Cross Joins and Unions are also possible.
 
-### Where
+## Where
 
 ```$users = DB::table('users')->where('votes', '=', 100)->get();```
 
@@ -243,7 +238,7 @@ $users = DB::table('users')->where([
 ```
  There are also some additional where clauses like ``` where Between```.
 
-# Pessimistic Locking
+## Pessimistic Locking
 A shared lock prevents the selected rows from being modified until your transaction commits:
 
 ``` DB::table('users')->where('votes', '>', 100)->sharedLock()->get(); ```
@@ -258,7 +253,7 @@ The command I always forget:
 
 ```php artisan migrate:refresh --seed```
 
-### Column Types
+## Column Types
 
 ```$table->bigInteger('votes');
 $table->double('column', 15, 8);
@@ -270,7 +265,7 @@ $table->softDeletes();```
 
 ```->nullable()```
 
-### Indexes
+## Indexes
 
 When creating:
 ```$table->string('email')->unique()```
@@ -283,7 +278,7 @@ Compound index:
 
 
 
-### Foreign Key Constraints
+## Foreign Key Constraints
 
 ```
  $table->foreign('user_id')->references('id')->on('users');
@@ -334,7 +329,7 @@ $flights = App\Flight::where('active', 1)
 
 ** Can use cursors **
 
-#### Single Results
+### Single Results
 
 ```
 $flight = App\Flight::find(1);
@@ -343,7 +338,7 @@ $flight = App\Flight::find(1);
 ```
 $flight = App\Flight::where('active', 1)->first();
 ```
-#### Aggregates
+### Aggregates
 
 ```$count = App\Flight::where('active', 1)->count();```
 
@@ -377,7 +372,7 @@ You can also delete by a query:
 
 ```$deletedRows = App\Flight::where('active', 0)->delete();```
 
-### Query Scopes
+## Query Scopes
 
 
 
@@ -415,7 +410,7 @@ User::withoutGlobalScope(AgeScope::class)->get();
 
 
 
-#### Local Scopes
+### Local Scopes
 Common set of constraints which mat easily be reused throughout the application.
 Just added to models:
 
@@ -430,7 +425,7 @@ Then use them like this:
 ```$users = App\User::popular()->active()->orderBy('created_at')->get();```
 
 
-#### Dynamic Scopes
+### Dynamic Scopes
 A scope which accepts parameters. LIke this:
 
 ```
@@ -444,22 +439,22 @@ And used like this:
 
 ```$users = App\User::ofType('admin')->get();```
 
-###  Events
+##  Events
 
 Eloquent models fire lots of events. These can then be used to execute code.
 
 To get started, define a ```$dispatchesEvents``` property on your Eloquent model that maps various points of the Eloquent model's lifecycle to your own event classes.
 
-### Observers
+## Observers
 
 If you are listening to many events on a mode, you may use observers to group the listeners.
 
-### Relationships
+## Relationships
 
 Refer to my Eloquent Cheatsheet for these.
 
 
-#### Querying Relationship Existence
+### Querying Relationship Existence
 
 Only gets posts with comments.
 
@@ -471,7 +466,7 @@ Get posts without and comments.
 You can count the number of related models:
 ```$posts = App\Post::withCount('comments')->get();```
 
-#### Inserting and Updating Related Models
+### Inserting and Updating Related Models
 
 ```
 $comment = new App\Comment(['message' => 'A new comment.']);
@@ -501,14 +496,14 @@ or ```detach```.
 The sync method can also be used to construct many-to-many associations.
 ``$user->roles()->sync([1, 2, 3]);``
 
-### Collections
+## Collections
 
 All multi result sets are Eloquent Collectons which extend the base Laravel Collection.
 
-### Mutators
+## Mutators
 Accessors and mutators allow you to format Eloquent attribute values when you retrieve or set.
 
-#### Assessors
+### Accessors
 ```
 public function getFirstNameAttribute($value)
  {
@@ -517,7 +512,7 @@ public function getFirstNameAttribute($value)
 ```
 retrieve like this ```$firstName = $user->first_name;```
 
-#### Mutators
+### Mutators
 
 Just like this:
 ```
@@ -527,9 +522,9 @@ Just like this:
     }
     ```
 
-#### Attribute Casting
+## Attribute Casting
 
-### API Resources
+# API Resources
 
 When building an API you need to transform Eloquent Models to JSON.
 Laravel resource classes do this.
@@ -556,7 +551,7 @@ There is just a toArray method:
 
 ```
 
-### Serialization
+## Serialization
 
 Array:
 ```return $user->toArray();```
