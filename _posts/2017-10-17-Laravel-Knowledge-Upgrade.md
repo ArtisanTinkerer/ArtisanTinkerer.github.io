@@ -253,7 +253,7 @@ The command I always forget:
 
 ```php artisan migrate:refresh --seed```
 
-## Column Types
+##Column Types
 
 ```$table->bigInteger('votes');
 $table->double('column', 15, 8);
@@ -265,7 +265,7 @@ $table->softDeletes();```
 
 ```->nullable()```
 
-## Indexes
+##Indexes
 
 When creating:
 ```$table->string('email')->unique()```
@@ -278,7 +278,7 @@ Compound index:
 
 
 
-## Foreign Key Constraints
+##Foreign Key Constraints
 
 ```
  $table->foreign('user_id')->references('id')->on('users');
@@ -292,10 +292,10 @@ Schema::disableForeignKeyConstraints();
 
 ```
 
-## Redis
+##Redis
 
 
-## Eloquent
+##Eloquent
 
 Make model with migration:
 
@@ -309,7 +309,7 @@ public $timestamps = false;
 
 ```
 
-###  Retrieving Results 
+###Retrieving Results 
 
 Getting all: ```$flights = App\Flight::all();```
 
@@ -329,7 +329,7 @@ $flights = App\Flight::where('active', 1)
 
 ** Can use cursors **
 
-### Single Results
+###Single Results
 
 ```
 $flight = App\Flight::find(1);
@@ -338,11 +338,11 @@ $flight = App\Flight::find(1);
 ```
 $flight = App\Flight::where('active', 1)->first();
 ```
-### Aggregates
+###Aggregates
 
 ```$count = App\Flight::where('active', 1)->count();```
 
-### Inserting and Updating Models
+###Inserting and Updating Models
 
 Mass Updates:
 
@@ -362,7 +362,7 @@ New does not persist to the database.
 
 **UpdateOrCreate**
 
-### Deleting Models
+###Deleting Models
 
 If you know the primary key, you can just destroy:
 
@@ -372,11 +372,11 @@ You can also delete by a query:
 
 ```$deletedRows = App\Flight::where('active', 0)->delete();```
 
-## Query Scopes
+##Query Scopes
 
 
 
-#### Global Scopes
+####Global Scopes
 Global scopes allow you to add constraints to all queries for a given model. (A bit like soft deletes);
 
 
@@ -410,7 +410,7 @@ User::withoutGlobalScope(AgeScope::class)->get();
 
 
 
-### Local Scopes
+###Local Scopes
 Common set of constraints which mat easily be reused throughout the application.
 Just added to models:
 
@@ -425,7 +425,7 @@ Then use them like this:
 ```$users = App\User::popular()->active()->orderBy('created_at')->get();```
 
 
-### Dynamic Scopes
+###Dynamic Scopes
 A scope which accepts parameters. LIke this:
 
 ```
@@ -439,22 +439,22 @@ And used like this:
 
 ```$users = App\User::ofType('admin')->get();```
 
-##  Events
+##Events
 
 Eloquent models fire lots of events. These can then be used to execute code.
 
 To get started, define a ```$dispatchesEvents``` property on your Eloquent model that maps various points of the Eloquent model's lifecycle to your own event classes.
 
-## Observers
+##Observers
 
 If you are listening to many events on a mode, you may use observers to group the listeners.
 
-## Relationships
+##Relationships
 
 Refer to my Eloquent Cheatsheet for these.
 
 
-### Querying Relationship Existence
+###Querying Relationship Existence
 
 Only gets posts with comments.
 
@@ -466,7 +466,7 @@ Get posts without and comments.
 You can count the number of related models:
 ```$posts = App\Post::withCount('comments')->get();```
 
-### Inserting and Updating Related Models
+###Inserting and Updating Related Models
 
 ```
 $comment = new App\Comment(['message' => 'A new comment.']);
@@ -496,14 +496,14 @@ or ```detach```.
 The sync method can also be used to construct many-to-many associations.
 ``$user->roles()->sync([1, 2, 3]);``
 
-## Collections
+##Collections
 
 All multi result sets are Eloquent Collectons which extend the base Laravel Collection.
 
-## Mutators
+##Mutators
 Accessors and mutators allow you to format Eloquent attribute values when you retrieve or set.
 
-### Accessors
+###Accessors
 ```
 public function getFirstNameAttribute($value)
  {
@@ -512,7 +512,7 @@ public function getFirstNameAttribute($value)
 ```
 retrieve like this ```$firstName = $user->first_name;```
 
-### Mutators
+###Mutators
 
 Just like this:
 ```
@@ -522,9 +522,9 @@ Just like this:
     }
     ```
 
-## Attribute Casting
+##Attribute Casting
 
-# API Resources
+#API Resources
 
 When building an API you need to transform Eloquent Models to JSON.
 Laravel resource classes do this.
@@ -551,7 +551,7 @@ There is just a toArray method:
 
 ```
 
-## Serialization
+##Serialization
 
 Array:
 ```return $user->toArray();```
@@ -571,21 +571,21 @@ You can also ```$append``` attributes.
 
 
 
-## Testing
+##Testing
 
 Unit testing: Most unit tests probably focus on a single method
 
 
-# Refresh
+#Refresh
 
 
 
-## Service Providers
+##Service Providers
 
 
 
 
-# Revise
+#Revise
 
 Contracts
 Service Container 
@@ -593,14 +593,14 @@ When to use queues and when to use observers.
 
 
 
-# Don't forget
+#Don't forget
 
 Guards!
 
 ## Difference between Contract and Facade 
 
 
-# Links
+#Links
 [https://scaleyourcode.com/blog/article/10](https://scaleyourcode.com/blog/article/10)
 
 
