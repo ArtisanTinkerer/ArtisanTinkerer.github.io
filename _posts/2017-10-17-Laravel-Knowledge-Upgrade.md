@@ -185,7 +185,7 @@ Failed queue table
 
 # Database
 
-Three ways to access database: DB Facade, Query Builder or Eloquent.
+Three ways to access database: Raw SQL, Query Builder or Eloquent.
 
 ## DB Facade.
 
