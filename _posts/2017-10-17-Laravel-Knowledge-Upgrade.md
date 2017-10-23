@@ -219,7 +219,7 @@ Selects can be done.
 
 **Raw selected can be done but be wary of SQL injection**
 
-##Joins
+## Joins
 
 Inner join = ```->join('contacts', 'users.id', '=', 'contacts.user_id') ```
 Left Join = ```->leftJoin('posts', 'users.id', '=', 'posts.user_id') ```
@@ -279,7 +279,7 @@ Compound index:
 
 
 
-##Foreign Key Constraints
+## Foreign Key Constraints
 
 ```
  $table->foreign('user_id')->references('id')->on('users');
