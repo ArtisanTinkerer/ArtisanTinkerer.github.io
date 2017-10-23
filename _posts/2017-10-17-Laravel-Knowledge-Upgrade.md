@@ -256,12 +256,15 @@ The command I always forget:
 
 ## Column Types
 
-```$table->bigInteger('votes');
+```
+$table->bigInteger('votes');
 $table->double('column', 15, 8);
 $table->boolean('confirmed');
 $table->date('created_at');
 $table->dateTime('created_at');
-$table->softDeletes();```
+$table->softDeletes(); 
+```
+
 ```$table->string('name', 10); ``` VarChar with length
 
 ```->nullable()```
