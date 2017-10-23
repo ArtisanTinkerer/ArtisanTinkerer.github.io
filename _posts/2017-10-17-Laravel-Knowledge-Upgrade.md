@@ -325,9 +325,8 @@ Adding additional constraints:
 $flights = App\Flight::where('active', 1)
                ->orderBy('name', 'desc')
                ->take(10)
-               ->get()
-               ```
-
+               ->get()           
+```
 
 ```all``` and ```get``` return a collection.
 
