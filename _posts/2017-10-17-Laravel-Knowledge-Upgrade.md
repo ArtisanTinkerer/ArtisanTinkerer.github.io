@@ -185,7 +185,7 @@ Failed queue table
 
 # Database
 
-Three ways to access database: Raw SQL, Query Builder or Eloquent.
+Two ways to access database: Raw SQL, or Eloquent.
 
 ## DB Facade.
 
@@ -205,9 +205,8 @@ The get method returns a collection of StdClass.
 If you just want a single row, you can use ->first:
 ```$user = DB::table('users')->where('name', 'John')->first();```
 
-If you just want a single field you can use:
+If you just want a single field you can use ```->value('email') ```
 
-```->value('email');```
 
 also ```->pluck```
 
