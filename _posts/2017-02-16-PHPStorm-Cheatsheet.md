@@ -4,9 +4,32 @@ title: "PHPStorm Cheatsheet"
 date: 2017-02-16
 ---
 
+# Live Templates
+
+```
+fore
+prif
+pubf
+
+```
+
+## Laravel Live Templates
+
+https://github.com/koomai/phpstorm-laravel-live-templates
 
 
 # Shortcuts
+
+## Top Ones
+
+**ALT+Home** - Breadcrumbs Nav
+
+**Ctrl + E** - Toggle used files 
+
+
+
+
+## The Rest
 
 **ALT F1 1** - Navigate to Project Explorer
 
