@@ -329,7 +329,7 @@ $flights = App\Flight::where('active', 1)
 
 ```all``` and ```get``` return a collection.
 
-** Can use cursors **
+**Can use cursors**
 
 ### Single Results
 
@@ -352,8 +352,9 @@ Mass Updates:
 App\Flight::where('active', 1)
           ->where('destination', 'San Diego')
           ->update(['delayed' => 1]);
-          ```
-Once line create:
+```
+         
+One line create:
 
 ```$flight = App\Flight::create(['name' => 'Flight 10']);```
 
