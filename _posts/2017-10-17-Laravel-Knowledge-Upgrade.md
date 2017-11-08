@@ -523,7 +523,8 @@ Just like this:
     {
         $this->attributes['first_name'] = strtolower($value);
     }
-    ```
+```
+
 
 ## Attribute Casting
 
