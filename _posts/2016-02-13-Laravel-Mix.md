@@ -54,5 +54,24 @@ These need to reside in resources/assets/
 # Gone back to Laravel 5.3.4 and Elixir
 Not got time work on this the moment.
 
+# New 5.4 Project
 
+Mix should work OK now.
+
+
+ ```.sourceMaps();``` option can be added.
+ 
+ 
+ To load:
+ 
+ ```<link rel="stylesheet" href="{{ mix('/css/app/css') }}">```
+ 
+ 
+ Assets in resources\assets
+ 
+ 
+ 
+ 
+ 
+ 
 
