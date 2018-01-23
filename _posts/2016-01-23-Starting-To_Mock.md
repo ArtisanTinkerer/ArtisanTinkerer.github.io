@@ -88,12 +88,14 @@ class ExampleTest extends TestCase
   }
   public function test_adds_user_to_newsletter()
   {
+    //Arrange
     $curl = Mockery::mock('Curl');
     $curl->shouldReceive('post')->once()->andReturn('mocked');
-    
+    //Act
+    $newsletter = new Newsletter($curl);
     $newsletter->addToList('foo-list');
     
-    //assertion
+    //Assert
   }
   
 
