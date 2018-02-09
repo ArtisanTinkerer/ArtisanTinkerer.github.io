@@ -22,5 +22,9 @@ Maybe
 1, seed groups
 2, seed users - assigned to groups
 
-Or Maybe this should all be done in users and groups seeder.
+**Or Maybe this should all be done in users and groups seeder.**
+
+##
+
+Don't bother, just TTD and use factories in the tests. 
 
