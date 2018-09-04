@@ -4,7 +4,13 @@ date: 2018-09-04
 layout: default
 ---
 
-# 1 Fake Them
+## Firing Events
+event(new AgreementCreated($agreement));
+
+
+## Testing Them
+
+### 1 Fake Them
 ```
       Event::fake();
 
