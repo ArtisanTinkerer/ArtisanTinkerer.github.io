@@ -1,0 +1,33 @@
+---
+title: "Design Patterns"
+date: 2018-09-05
+layout: default
+---
+
+https://www.youtube.com/watch?v=e4ugSgGaCQ0
+
+## Colin Decarlo
+
+How do I become a good developer?
+* Gang of 4 Design Patterns - hard to understand
+* Good ideas but not really for web development
+
+## The Adapter Pattern
+* Sits between two components with incompatible interfaces
+* Converts the messages
+* Good to sit between external APIs to buffer from change.
+* Adapter class implements Locator
+* Bind in AppServiceProvider
+* Tests for 3rd party API or API which communicates over network - make a Fake class.
+
+
+## The Strategy Pattern
+* Me: Just use an interface for a family of classes, this forces them to use the same methods and makes them interchangeable. 
+* E.g. A stratery for parsing each type of record 20:21
+* Determine which strategy (class) to use 
+
+
+## The Factory Pattern
+
+
+
