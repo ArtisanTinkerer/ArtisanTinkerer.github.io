@@ -23,3 +23,20 @@ https://martinfowler.com/articles/microservices.html
  
 
  ### Decentralized Data Management
+ 
+ * conceptual model of the world different between systems.
+ * microservices prefer letting each service manage it's own DB
+ * managing updates - transactions if across multiple resources
+ * microservice architectures emphasize transactionless coordination between services
+ * businesses handle a degree of inconsistency 
+ 
+ ### Infrastructure Automation
+ 
+ ### Design for failure
+ * applications need to be designed so that they can tolerate failure of services
+ * real time monitoring
+ 
+ ### Evolutionary Design
+ 
+ 
+ 
