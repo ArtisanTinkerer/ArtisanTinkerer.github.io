@@ -39,4 +39,79 @@ https://martinfowler.com/articles/microservices.html
  ### Evolutionary Design
  
  
+ # Sam Newman - Building Microservices
+ 
+ ## Loose Coupling
+ * Change to one should not require change to another.
+ * A loosely coupled service knows as little as it needs to about the services with thich it collaborates.
+ 
+ ## Synchronous Versus Asynchronous
+ * Events versus request/response (could use callbacks)
+ 
+ ###Two styles of architecture:
+ 
+ #### Orchestration
+ Central brain guides and drives the process.
+ 
+ #### Choreography
+ Inform each part of the system of it's job and let it work out the details (finding their way and reacting to others around them.
+ ).
+ 
+ 
+ Example: uses **Orchestration** and request/response, customer service is the brain and can therefore track where a customer is in the process.
+ * Request/response means that we know if each stage has worked. 
+ * Downside is that the brain can become too much of a central governing authority.
+ 
+ With **choreographed** approach
+ * Events from each stage in the process are listened for by other services.
+ * Significantly more decoupled.
+ 
+ ** I strongly prefer aiming for a choreographed
+system, where each service is smart enough to understand its role in the whole dance. **
+
+* Synchronous calls are simpler, and we get to know if things worked straightaway.
+
+**Callbacks?**
+
+## RPC
+
+## REST
+
+### Hypermedia As the Engine of Application State (HATEOAS)
+* links to other pieces of content in a variety of formats
+* the client looks for and navigates links to find what it needs.
+*MB so, the JSON contains the links for the actions
+
+ 
+ ### Implementing Asynchronous Event-Based Collaboration
+ 
+ ### Complexities of Asynchronous Architectures
+ 
+ * Maximum retries for jobs
+ * and strongly consider the use of correlation IDs, which allow you to trace requests across process
+ 
+ ### DRY and code reuse
+ * Do not share code between services, if one service needs changing, all will be affected.
+ 
+ ### Access by reference
+ 
+ * Get to see what the customer looked like, when the request was made.
+ * May have changed after.
+ * **Could send URI for customer and order and look them up when they are needed.**
+ * but be very wary of passing around data in requests when you don’t know its freshness.
+ 
+ ### Versioning
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Pakt press books
+ 
+ 
+ 
+ 
  
