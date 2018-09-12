@@ -102,10 +102,52 @@ system, where each service is smart enough to understand its role in the whole d
  
  ### Versioning
  
+ * Don't make breaking changes.
+ * Limit fields sent - refer to by name.
+ * Semantic versioning MAJOR.MINOR.PATCH
+ * MAJOR - backward incompatability changes have been made
+ * MINOR - new functionality should be backwards compatible
+ * PATCH - bug fixes to existing functionality
+ 
+ * Coexist different endpoints
+ * Use multiple concurrent serice versions
  
  
+ zzzz
+ 
+ * Backends for Frontends - API Gateway
  
  
+ ### Summary
+ 
+ Prefer choreography over orchestration.
+ 
+ 
+ ## Splitting the Monolith
+ 
+ ### Example: Shared Static Data
+ Country codes used by several services, options:
+ 
+ 1, Db with them in for each service - data consistency challenge
+ 2, Treat static data as code - property file or enum - same consistency challenge
+ 3, Static data in a service.
+ **Page 160**
+ 
+ 
+ ### Transactional Boundaries
+ * these events either all happen together, or none of them happen.
+ 
+ * Eventual consistency - accept that the system will get itself into a consistent
+state at some point in the future.
+ 
+ #### What to do?
+ Eventual consistency is easier to build.
+ 
+ ### Reporting
+ * Reporting DB, keeps load from primary DB.
+ 1, reporting system pulls data/
+ 2, data pump - pull data fom db, then to reporting db (another app is now hitting main db!)
+ 3, 
  
  
  
