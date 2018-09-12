@@ -146,8 +146,31 @@ state at some point in the future.
  ### Reporting
  * Reporting DB, keeps load from primary DB.
  1, reporting system pulls data/
- 2, data pump - pull data fom db, then to reporting db (another app is now hitting main db!)
- 3, 
+ 2, Data Pump - pull data fom db, then to reporting db (another app is now hitting main db)
+ 3, Event Data Pump - microservice emits events - subscriber pumps data into reporting db.
+ 4, 
+ 
+ ### Cost of Change
+ * CRC cards - name, responsibilities - who it communicates with
+ 
+ ## Chapter 6 Deployment
+ ## Chapter 7 Testing
+ Mocking or stubbing - maybe my portal - azure tests are wrong (end-to-end tests?)
+ * Flaky tests
+ 
+ ## Chapter 8 Monitoring
+ ## Chapter 9 Security
+ ## Chapter 10 Conway's Law and System Design
+ * Internal Open Source
+ ## Chapter 11 Microservices at Scale
+ 
+ Yawn
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
