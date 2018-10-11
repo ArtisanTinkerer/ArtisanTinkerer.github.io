@@ -4,6 +4,63 @@ date: 2018-10-10
 layout: default
 ---
 
+# Clean Code PHP
+https://github.com/jupeter/clean-code-php#functions
+
+## Variables
+* use meaningful names
+* use searchable names (not numbers)
+* avoid nesting deeple, return early
+* avoid mental mapping (no $i)
+* don't add uneeded context ($carMake)
+* typehint to avoid nulls (string $thing)
+* use !== and ===
+
+
+
+
+ ## Functions
+ * don't use flag arguments - have a differnet function instead
+* avoid side effects - have one service which writes to a file - don't use mutable data types
+* * don't change globals
+* don't use Singletons
+* Encapsulate conditions ``` $article->isPublished()```
+* avoid negative conditionals
+* avoid conditionals  - use polymorphism instead
+* avoid type checking - type hint instead
+* remove dead code
+* use getters and setters
+* use private by default
+
+## Classes
+* prefer composition over inheritance - have a class instead of extending (Employee has EmployeeTaxData)
+* avoid fluent
+* prefer final classes - use an interface
+### SOLID  
+#### Single Responsibility
+* Never more than one reason for a class to change - class should just do one thing.
+
+#### Open/Closed
+*  Open for extension - closed for modification
+#### Liskov Substitution
+#### Interface Segregation
+#### Dependency Inversion
+
+### DRY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Chapter 3 Functions
 ## General
 
