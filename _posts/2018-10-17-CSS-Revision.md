@@ -22,3 +22,24 @@ div > p{
 
 ### general sibling selector (~)
 
+## Display Property
+
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss_display
+
+### None
+
+### Inline
+
+In the flow.
+
+### Block
+
+Separated out with padding above and below.
+
+### Inline-Block
+
+Inserted but separated out into blocks.
+
+### Table
+After each other in rows
+
