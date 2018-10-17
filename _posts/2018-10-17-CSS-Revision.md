@@ -43,3 +43,13 @@ Inserted but separated out into blocks.
 ### Table
 After each other in rows
 
+## Box Sizing
+
+Allow us to include the padding and border in an element's total width and height.
+
+* Without box-sizing padding (and border) is included.
+
+```box-sizing: border-box;``` means that padding is applied internally
+
+
+
