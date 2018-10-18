@@ -83,11 +83,98 @@ font-family -> the font type
 font-style -> norma,italic or oblique
 font-size
 
+text-decoration 
+
+line-height
+
+#### Alignment
+left,right,center and justify
+
+#### Transformation
+text-transform:uppercase;
+
+#### Indenting
+text-indent:20px;
+
+### CSS Colors
+color
+background-color
+name, hex or RGB
+
+#### Gradients
 
 
+## Positioning Elements
+### static 
+* default
+
+### absolute 
+* removed from the page
+* just sits at the given coordinates
+```
+#object{
+  position: absolute;
+  top: 100px;
+  bottom: 200px;
+}
+```
+
+### relative 
+* moves the object relative to the position it would take
+```
+#object{
+  position: relative;
+  top: 10px;
+  bottom: 10px;
+}
+```
+
+### fixed 
+* moves object to location but only in current viewport
+* good for docked bars
+```
+#object{
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+}
+```
 
 
+## Pseudoclasses
+* used to classify elements using characteristics other than their,names, attributes or content.
+first-line
+first-child
+first-letter
+```
+.bigfirst:first-letter {
+  font-size:400%
+}
 
+```
+hover
+focus
+active
+
+## Pseudoelements
+* adding content rather than style to an element
+
+```
+.offer:before {content-'Special Offer';}
+```
+
+## The Box Model and Layout
+
+### Margins
+
+* outermost level
+* collapsing - when stacked on top of each other, only the largest margin is used
+
+### Borders
+
+### Padding
+
+## Advanced CSS
 
 
 
