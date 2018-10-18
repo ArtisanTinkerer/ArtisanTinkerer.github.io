@@ -176,8 +176,15 @@ active
 
 ## Advanced CSS
 
-
-
+### The box-sizing Property
+Total size is including padding and borders
+```
+box-sizing:border-box;
+```
+or Only it's content
+```
+box-sizing:content-box;
+```
 
 
 
