@@ -40,6 +40,58 @@ A service provider is responsible for binding things into Laravel's **Service Co
 
 They extend ```Illuminate\Support\ServiceProvider``` and contain ```register``` and ```boot```.
 
+
+## Resources
+### Configuration
+
+Get copied with ```vendor:publish```
+
+
+```
+public function boot()
+{
+    $this->publishes([
+        __DIR__.'/path/to/config/courier.php' => config_path('courier.php'),
+    ]);
+}
+```
+
+### Routes
+```
+public function boot()
+{
+    $this->loadRoutesFrom(__DIR__.'/routes.php');
+}
+```
+
+### Migrations
+
+```
+public function boot()
+{
+    $this->loadMigrationsFrom(__DIR__.'/path/to/migrations');
+}
+```
+
+### Views
+
+```
+$this->loadViewsFrom(__DIR__.'/path/to/views', 'courier');
+```
+### Commands
+### Public Assets
+
+
+
+
+
+
+
+
+
+
+
+
 # The Service Container
 https://laravel.com/docs/5.6/container
 
@@ -191,7 +243,75 @@ public function register()
 
 
 
-When to use  a service provider
+# When to use  a service provider?
+
+From https://laracasts.com/lessons/service-providers-decoded
+
+** IOC container is the application **
+
+Can bind, useful when you have dependencies:
+
+```
+$filesystem = new Illuminate\Filesystem\Filesystem(new Foo, new Bar(new Baz));
+
+```
+This is cumbersome.
+Can be done once in a service provider:
+
+```
+public function register()
+{
+    $this->app->bindShared('files', function() {return new Filesystem(new Baz, new Bar, new Foo)});
+}
+```
+
+This will enable us to do this:
+```
+$filesystem = $app['files'];
+```
+
+## Quick example
+Foo needs Bar and Baz:
+
+Instead of:
+
+```
+$foo = new Foo( new Bar, new Baz)
+
+```
+
+Can use:
+
+```
+App::bind('Foo', function()
+{
+    return new Foo(new Bar, new Baz)
+} );
+
+dd(App::make('Foo'))
+
+```
+The app binding can then go in a service provider.
+
+**This is all just about resolving depencies.**
 
 
 
+
+
+
+
+
+
+Imagine you have created a class which requires multiple dependencies and in general you use it like this:
+
+```$foo = new Foo(new Bar(config('some_secret_key')), new Baz(new Moo(), new Boo()), new Woo('yolo', 5));```
+
+it's doable, but you wouldn't want to figure out these dependencies every time you try to instantiate this class. That's why you want to use service provider where in the register method you can define this class as:
+```
+
+$this->app->singleton('My\Awesome\Foo', function ($app) {
+   return new Foo(new Bar(config('some_secret_key')), new Baz(new Moo(), new Boo()), new Woo('yolo', 5));
+});
+
+```
