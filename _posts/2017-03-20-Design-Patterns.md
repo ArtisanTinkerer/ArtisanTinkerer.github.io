@@ -7,6 +7,23 @@ date: 2017-03-20
 # Design Patterns
 
 
+# The Iterator Pattern
+
+Implement the Iterator interface:
+
+The Iterator interface demands five methods be implemented:
+* current(): returns the current element in the collection
+* key(): returns the current key in the collection
+* next(): moves to the next element in the collection
+* rewind(): moves back to the first element in the collection
+* valid(): returns whether there's an element at the current position in the collection (eg: next() could move past the end of the collection).
+
+** You can then just foreach through. ** 
+
+
+
+IteratorAggretate
+
 
 # Decorator Pattern
 
