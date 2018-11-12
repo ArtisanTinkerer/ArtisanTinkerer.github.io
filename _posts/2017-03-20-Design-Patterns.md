@@ -37,8 +37,8 @@ IteratorAggretate
   interface CarService{
     public function getCost();
   }
-  
-    class BasicInspection implements CarDervice {
+   
+    class BasicInspection implements CarService {
 
       public function getCost()
     {
