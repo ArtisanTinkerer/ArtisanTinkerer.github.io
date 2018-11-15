@@ -55,5 +55,18 @@ Altering the $user variable in the function will not change it outside.
 
 
 # The Strategy Pattern
+Define a family of algorithims.
+
+Logger interface.
+3 Different logging classes implement this interface.
+
+
+
+
+
+
+
+
+
 
 
