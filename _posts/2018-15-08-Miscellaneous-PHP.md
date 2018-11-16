@@ -65,6 +65,56 @@ Logger interface.
 
 
 
+# Laravel From Scratch 5.7
+## 21 Service Container and Auto-Resolution
+Auto resolving when type hinting - looks in the Service Container (basically a big list of key-value pairs).
+Can use ```app(Filesystem::class) ```
+
+Putting things into the toybox (Service Container):
+```
+app()->bind('example', function(){
+  return new \App\Example;
+});
+```
+if you want a singleton:
+```
+app()->singleton('example', function(){
+  return new \App\Example;
+});
+```
+
+to retrieve:
+
+```
+app('example')
+```
+
+You don't need to bind, if you use the class path:
+```
+app('App\Example');
+```
+
+If Example depends on a Foo, inject this into it's constructor. This will get auto resolved.
+
+
+
+When to use the Service Container.
+
+## 22 Service Providers
+
+
+* need to be registered in ```app.php```
+* ```register``` method is where you bind
+* Laravel runs through all the service providers and calles ```register```
+* It then runs through again and calls ```boot```
+
+
+Can just add to ```AppServiceProvider``` or create a dedicated provider (must add to ```app.php```).
+
+Can bind an interface to a class.
+
+
+
 
 
 
