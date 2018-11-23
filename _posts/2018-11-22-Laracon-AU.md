@@ -79,13 +79,38 @@ Slides available here:
 https://mattstauffer.com/talks/
 
 # Abusing Laravel for Fun and Profit
+https://www.youtube.com/watch?v=dd-iHhmSi2k&index=8&list=PLEkJYA4gJb7_FKspNTgrve7FUb3A1dT3y
 
-
+## Front End Filters
+Filtering in controllers
+### Pipeline
+### Feature tests powered by seeders
+Arrange -> Act -> Assert
+Don't keep with the other seeders.
+### Form Requests for Database Access
 
 
 # Understanding git
 Anwesha Chatterjee
 https://www.youtube.com/watch?v=ofVcPhK2oYU&list=PLEkJYA4gJb7_FKspNTgrve7FUb3A1dT3y&index=6
+
+* should rebase not amend
+
+```git log --graph -- oneline --all```
+
+```git reflog ```
+
+Try rebasing:
+``` git rebase master```
+
+# Building a complex product while scaling a team and a business on Laravel
+https://www.youtube.com/watch?v=eef3Pnxc5A0&index=5&list=PLEkJYA4gJb7_FKspNTgrve7FUb3A1dT3y
+
+
+* annotations
+* multi-tenancy 
+09:01
+
 
 
 
