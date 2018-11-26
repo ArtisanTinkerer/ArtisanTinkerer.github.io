@@ -114,6 +114,16 @@ https://www.youtube.com/watch?v=eef3Pnxc5A0&index=5&list=PLEkJYA4gJb7_FKspNTgrve
 * slim controllers
 * use Facades (not their own) -> contracts and dependency injection
 * monolith and packases
+* interfaces good for learning code
+* clearly defined APIs
+* passing Eloquent models around take care with packages
+* Homestead -> Docker + Kubernetes
+* Tech debt weeks - 1 week a month - > customer value - just improving what you have got
+* remote first
+* document decisions
+* write things down!
+* markdown files in the code
+
 
 
 
