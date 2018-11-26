@@ -110,7 +110,12 @@ https://www.youtube.com/watch?v=eef3Pnxc5A0&index=5&list=PLEkJYA4gJb7_FKspNTgrve
 * annotations
 * multi-tenancy 
 09:01
+* domain specific classes
+* slim controllers
+* use Facades (not their own) -> contracts and dependency injection
+* monolith and packases
 
 
 
+29:48
 
