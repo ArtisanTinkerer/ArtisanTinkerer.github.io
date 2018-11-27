@@ -4,10 +4,43 @@ date: 2018-11-22
 layout: default
 ---
 
+# Modelling business requirements with Eloquent.
+
+## The Ugly
+* creates model in controller - move to command bus
+
+## Case Study
+
+* Use the business terminology.
+** Leaky Abstractions ** - save method inside of model
+
+** Domain-Driven Eloquent
+
+
+
 # Level up with a Microservices architecture
 Douglas Reith
 
 https://www.youtube.com/watch?v=iAKfq4uJrBY&list=PLEkJYA4gJb7_FKspNTgrve7FUb3A1dT3y&index=9
+
+Why?
+* growth
+
+## Design MA -> Deploy as a Monolith
+
+## How?
+* Domain driven design - language ubiquitous in a domain. 
+* CQRS - Command and Query Request Segregation - write model and read model
+* Request Journey
+* Package Exploration
+
+* Packages can mimic the language of the business.
+
+
+
+
+
+
 
 # Patterns that pay off
 Matt Stauffer
@@ -17,7 +50,7 @@ https://www.youtube.com/watch?v=FNyUX2jVMeE&list=PLEkJYA4gJb7_FKspNTgrve7FUb3A1d
 Do this on every app no matter what.
 
 ## Reactive Patterns
-Feek/see the pain, then choose the fix
+Feel/see the pain, then choose the fix
 There is a need.
 
 **Problem: we just use patterns without first identifying a need **
