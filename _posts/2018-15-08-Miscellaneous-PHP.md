@@ -7,6 +7,30 @@ layout: default
 # Anonymous Functions
 https://phptherightway.com/pages/Functional-Programming.html
 
+## Mick's example
+```
+public function test3()
+    {
+        $fixed = 27;
+        $hi = 'hi';
+
+        //the variable fixed is stored at the function at this point
+        $addOneToFixed = function($hi) use ($fixed){
+            if($hi === 'hi'){
+                return $fixed +1;
+            }
+        };
+
+        $fixed = 28000;
+        dd($addOneToFixed($hi));
+
+    }
+```
+
+The variable inside () is passed when the function is called, the variable in the use is actually fixed when the function is defined
+
+
+
 ## Assigning to Variables
 
 ```
