@@ -137,6 +137,25 @@ Can just add to ```AppServiceProvider``` or create a dedicated provider (must ad
 
 Can bind an interface to a class.
 
+## PSR-4 Autoloading
+
+https://laracasts.com/lessons/psr-4-autoloading
+
+Laracasts example:
+
+app - Laracasts
+### namespace is from app folder
+```Laracasts\Validators;```
+### Autoload
+```
+"psr-4":{
+    "Laracasts\\";"app/Laracasts"
+}
+
+```
+
+
+
 
 
 
