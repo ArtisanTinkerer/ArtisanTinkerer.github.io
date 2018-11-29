@@ -156,8 +156,11 @@ app - Laracasts
 
 
 
+## Creating class from name
 
-
+```$modelClass = 'App\Models\\' . $type;
+ $modelClass::query()->where('updated_at', '>=', $timewindow)->first();
+```
 
 
 
