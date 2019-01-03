@@ -4,6 +4,20 @@ title: "Laravel Cheatsheet"
 date: 2016-02-18
 ---
 
+# Relationships
+
+A meter has many prices
+```
+$price->meter()->associate($meter);
+
+//other wat
+
+$meter->prices()->save($price);
+
+```
+
+
+
 # Add Table
 
 php artisan make:migration create_users_table
