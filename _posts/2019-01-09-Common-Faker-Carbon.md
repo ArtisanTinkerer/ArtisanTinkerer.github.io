@@ -32,5 +32,12 @@ $dt = Carbon::create(2012, 1, 31, 0);
 $dt->toDateString();               // 2015-12-19
 $startDate->toAtomString();
 
+eq() equals
+ne() not equals
+gt() greater than
+gte() greater than or equals
+lt() less than
+lte() less than or equals
+
 
 ```
