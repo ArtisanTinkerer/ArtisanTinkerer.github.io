@@ -30,6 +30,7 @@ $current = Carbon::now();
 $dt = Carbon::create(2012, 1, 31, 0);
 
 $dt->toDateString();               // 2015-12-19
+$startDate->toAtomString();
 
 
 ```
