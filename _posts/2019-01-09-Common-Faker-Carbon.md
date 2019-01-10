@@ -32,6 +32,8 @@ $dt = Carbon::create(2012, 1, 31, 0);
 $dt->toDateString();               // 2015-12-19
 $startDate->toAtomString();
 
+Carbon::parse('2016-12-20 10:26');
+
 eq() equals
 ne() not equals
 gt() greater than
