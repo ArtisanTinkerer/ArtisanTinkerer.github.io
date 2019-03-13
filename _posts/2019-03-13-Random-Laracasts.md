@@ -3,8 +3,13 @@ title: "Random-Laracasts"
 date: 2018-03-13
 layout: default
 ---
-https://laracasts.com/series/how-do-i/episodes/18
+
+[[_TOC_]]
+
+
 # How to Cleanly Refactor Loops
+
+https://laracasts.com/series/how-do-i/episodes/18
 
 1, foreach
 * create an array
@@ -68,4 +73,20 @@ collect($data)
 
 Collect, flatten, then filter.
 
+# Drying Up Forms
+## ```<form>``` is in the create or edit
+## variables can be passed in the @include
+```
+@include ('posts.form', [
+  'submitButtonText' => 'Update Post'
+])
+```
+
+
+```
+//old title if it exists ?? otherwise one from the db
+value="{{ old('title') ?? $post->title }}"
+```
+
+Jeff also passes a new $post into the create (his is done in the view). 
 
