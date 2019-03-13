@@ -90,3 +90,33 @@ value="{{ old('title') ?? $post->title }}"
 
 Jeff also passes a new $post into the create (his is done in the view). 
 
+# Eloquent Techniques
+## 1 Transactions 101
+
+```
+DB:transaction( function () {
+  //bill the customer
+  //create the customer
+
+});
+
+```
+
+## 2 Track Document Adjustments
+Timestamps can be added if required in pivot table.
+Add them in the relationship.
+```->withTimestamps();```
+
+
+## 3 Record Model Changes
+### Before and after changes
+
+```$document->getDirty() ``` values which have changed
+
+
+
+
+## 4 Dedicated Query String Filtering
+
+
+
