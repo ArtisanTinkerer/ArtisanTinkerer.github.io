@@ -10,7 +10,7 @@ layout: default
 |---|---|---|---|---|
 |One2One   | hasOne  | belongsTo  | ``` $user->phone ```  | $user->phone()->save($phone);  |
 |One2Many   | hasMany  | belongsTo  | ``` $post->comments```  |  ```$post->comments()->save($comment);``` |
-| ManyToMany  | belongsToMany  | belongsToMany   | $user->roles()->attach($roleId);  |   |
+| ManyToMany  | belongsToMany  | belongsToMany   |   | ```$user->roles()->attach($roleId);```  |
 
 
 
