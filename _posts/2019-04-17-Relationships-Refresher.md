@@ -103,14 +103,6 @@ Many to Many uses attach:
 ```$user->roles()->detach($roleId);```
 
 
-# Summary Table
-
-|  Relationship | Relationship  | Inverse  | Retrieving  | Saving  |
-|---|---|---|---|---|
-|One2One   | hasOne  | belongsTo  | ``` $user->phone ```  | $user->phone()->save($phone);  |
-|One2Many   | hasMany  | belongsTo  | ``` $post->comments```  |  ```$post->comments()->save($comment);``` |
-| ManyToMany  | belongsTo  | belongsTo   | $user->roles()->attach($roleId);  |   |
-
 
 
 
