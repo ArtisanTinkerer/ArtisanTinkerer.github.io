@@ -39,6 +39,17 @@ App.vue is the single page.
 New routes need to be registered in the routes array/
 
 
+Lazy loading and magic comments:
+```{
+    path: "/hawaii",
+    name: "hawaii",
+    component: () => import(/* webpackChunkName: "hawaii" */ "../views/Hawaii")
+  },```
+
+
+Passing oarams to views:
+```<router-link :to="{name:'DestinationDetails', params: {id:destination.id}}">```
+
 
 ### vue-cli
 ```
