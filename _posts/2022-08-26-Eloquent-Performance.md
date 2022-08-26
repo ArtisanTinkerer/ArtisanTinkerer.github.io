@@ -47,4 +47,8 @@ useful when we have a lot of records, look at metrics
 *   ->whereColumn('user_id', 'users.id')
 *   ->latest()
 *   ->take(1) //cam only return one column
+*   * can also cast in a query
+*   * then add to a scope
+*   * query builder builder logic to a scope
+*   
 
