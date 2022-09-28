@@ -23,3 +23,8 @@ https://grugbrain.dev/
 * only when really need one piece really needs to scale differently
 * one piece of app could take down the system
 * demonstrated need for different language
+
+# Taylor
+artisan about
+artisan db:show
+artisan db:monitor
