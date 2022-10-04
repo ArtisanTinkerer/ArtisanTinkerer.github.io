@@ -188,17 +188,14 @@ state at some point in the future.
  * Internal Open Source
  ## Chapter 11 Microservices at Scale
  
- Yawn
  
  
  
+ # Pakt press books
+ # Level up with a microservices architecture
+ https://confpad.io/2018-10-18-laracon-au-2018/9-level-up-with-a-microservices-architecture
  
  
- 
- 
- 
- 
- Pakt press books
  
  
  
