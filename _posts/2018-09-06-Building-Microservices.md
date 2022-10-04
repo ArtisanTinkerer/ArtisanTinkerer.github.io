@@ -153,6 +153,30 @@ state at some point in the future.
  ### Cost of Change
  * CRC cards - name, responsibilities - who it communicates with
  
+ ## Chapter 4 Microservices Communication Styles
+ In-process - calls within a single process
+ Inter-Process - calls between different processes across a network
+ 
+ We are currently using request-response.
+ 
+ ### Synchronous blocking
+ Service calls other service and waits.
+ ### Asynchchronous nonblocking
+ Service makes a call and then carries on processing.
+ ### Request-response
+ Service sends a response and expects a response.
+ ### Event-driven
+ Services emit events. Service emitting is unaware services which consume.
+ * need a way for services to emit events
+ * way for consumers to find out events have happened
+ * traditionally use a message broker like RabbitMQ
+ 
+ 
+ ### Common data
+ Services collaborate via shared data source (not common).
+ 
+ 
+ 
  ## Chapter 6 Deployment
  ## Chapter 7 Testing
  Mocking or stubbing - maybe my portal - azure tests are wrong (end-to-end tests?)
