@@ -29,3 +29,8 @@ artisan about
 artisan db:show
 artisan db:monitor
 10:01
+
+# Aaron Francis 
+Database Performance for Application Developers
+
+
