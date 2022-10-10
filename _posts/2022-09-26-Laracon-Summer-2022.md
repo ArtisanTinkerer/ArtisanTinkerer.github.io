@@ -65,5 +65,5 @@ $table->index(['first_name','last_name','birthday']);
 ## Queries
 06:34 
 
-
-
+# Freek - Define this only once.
+8:09
