@@ -106,11 +106,12 @@ MAX(salary) > 10000;
 **Here we are filtering by the result of MAX(salary)**
 
 
+### JOINS
 
-****
-
-
-
-
+**INNER JOIN** -- matching rows
+**LEFT JOIN** -- all from left
+**RIGHT JOIN** -- all from right
+**UNION** -- removes duplicates
+**UNION ALL** -- does not remove duplicates
 ****
 ****
