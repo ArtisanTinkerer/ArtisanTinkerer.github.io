@@ -60,12 +60,12 @@ ON DELETE CASCADE ON UPDATE RESTRICT
 
 
 ### Comparison
-**!= > < **
-**BETWEEN**
-**LIKE** - LIKE '%er' or '%er%' or _ to specify the number of chars
-**IN()**
-**NOT IN()**
-**AND/OR**
+**!= > < **  
+**BETWEEN**  
+**LIKE** - LIKE '%er' or '%er%' or _ to specify the number of chars  
+**IN()**  
+**NOT IN()**  
+**AND/OR**  
 
 ### Subqueries
  
@@ -79,26 +79,26 @@ Limited');
 
 ### Functions
 
-**CONCAT()**
+**CONCAT()**  
 **SUBSTRING()** -- SELECT SUBSTRING('Programming', 2); or  
-SELECT SUBSTRING('Programming', 2, 6);
+SELECT SUBSTRING('Programming', 2, 6);  
 
-**NOW()** - current date and time
-**CURDATE()** - 2018-08-28
-**CURTIME()**
+**NOW()** - current date and time  
+**CURDATE()** - 2018-08-28  
+**CURTIME()**  
 
 ### Aggregate Functions
 
-**COUNT()*** - * all rows but with column name returns only non  -- null
-SELECT COUNT(DISTINCT gender) FROM employees; will remove duplicates 
+**COUNT()*** - * all rows but with column name returns only non  -- null  
+SELECT COUNT(DISTINCT gender) FROM employees; will remove duplicates   
  
-**AVG()**
-**ROUND(x,y)**
-**MIN()**
-**MAX()**
-**SUM()**
-**GROUP BY** -- SELECT gender, MAX(salary) FROM employees GROUP BY gender;
-**HAVING** -- Filter the result of the grouped data
+**AVG()**  
+**ROUND(x,y)**  
+**MIN()**  
+**MAX()**  
+**SUM()**  
+**GROUP BY** -- SELECT gender, MAX(salary) FROM employees GROUP BY gender;  
+**HAVING** -- Filter the result of the grouped data  
 
 SELECT gender, MAX(salary) FROM employees GROUP BY gender HAVING
 MAX(salary) > 10000;
@@ -108,10 +108,10 @@ MAX(salary) > 10000;
 
 ### JOINS
 
-**INNER JOIN** -- matching rows
-**LEFT JOIN** -- all from left
-**RIGHT JOIN** -- all from right
-**UNION** -- removes duplicates
-**UNION ALL** -- does not remove duplicates
+**INNER JOIN** -- matching rows  
+**LEFT JOIN** -- all from left  
+**RIGHT JOIN** -- all from right  
+**UNION** -- removes duplicates  
+**UNION ALL** -- does not remove duplicates  
 ****
 ****
