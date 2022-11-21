@@ -34,9 +34,9 @@ I've not looked at MySQL lately, so time for a refresh!
 ## Column Constraints
 **NOT NULL**  
 **UNIQUE**  
-**DEFAULT**  - default value when none specified
-**PRIMARY KEY**  - by default UNIQUE and UNIQUE.
-**AUTO_INCREMENT**  - starts at 1, table can have only 1
+**DEFAULT**  - default value when none specified  
+**PRIMARY KEY**  - by default UNIQUE and UNIQUE.  
+**AUTO_INCREMENT**  - starts at 1, table can have only 1  
 
 **Foreign Keys** 
 
